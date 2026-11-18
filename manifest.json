@@ -1,0 +1,170 @@
+{
+  "release": "v6_lite",
+  "audio_enabled": false,
+  "total_ms": 40000,
+  "assets": [
+    {
+      "key": "live",
+      "orientation": "desktop",
+      "file": "assets/01_live_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 280570,
+      "sha256": "7c613b357aecf4b0b9ff868cdb8de741aa8bb080bf572e0ec9a5fbe91051fb96",
+      "source_sha256": "642579140d728a109eba13a5ec4c844aea6d5e77a3a1bad4d7e91fca1f46f44f",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "key": "live",
+      "orientation": "mobile",
+      "file": "assets/01_live_mobile.webp",
+      "width": 720,
+      "height": 1282,
+      "bytes": 341242,
+      "sha256": "a8f431302d68ba303cb00f6378425cc978bffa35cfc2c3ad8e477554d33b8b35",
+      "source_sha256": "2c97b6b2d943ae400f0b9b0ea19fac6bd8bea96b61dff8bc5a031374ab50768b",
+      "source_dimensions": {
+        "width": 940,
+        "height": 1674
+      }
+    },
+    {
+      "key": "legend",
+      "orientation": "desktop",
+      "file": "assets/02_legend_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 341992,
+      "sha256": "7f711f4b4460a06ca549b0199513686246dc12f6bdeb33ab97fbd26d2b5ba27e",
+      "source_sha256": "9c7d32c18d095758ec28581dfd158f346ff111016bf5b4285896f7792996045d",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "key": "legend",
+      "orientation": "mobile",
+      "file": "assets/02_legend_mobile.webp",
+      "width": 720,
+      "height": 1282,
+      "bytes": 321120,
+      "sha256": "ce62e5e8344a6f25b95a5a24d93930a1793c9da8108de726c4a5b809fc0ce4e8",
+      "source_sha256": "81036d7b64c5e269f0c2fe88ad3457b114251bd27f73e0a2e3e7cb1d7ef92bb4",
+      "source_dimensions": {
+        "width": 940,
+        "height": 1674
+      }
+    },
+    {
+      "key": "cut",
+      "orientation": "desktop",
+      "file": "assets/03_cut_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 318384,
+      "sha256": "6d5e5231d6f96fd995636d6a8079b8fd445a9a8f1ed75b199da5f9feb25a950c",
+      "source_sha256": "1b91e24ca892cc16e4b773d11e7119384594db139f5c6dafba3c0b880e3d8b63",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "key": "cut",
+      "orientation": "mobile",
+      "file": "assets/03_cut_mobile.webp",
+      "width": 720,
+      "height": 1282,
+      "bytes": 317724,
+      "sha256": "4c4279d16f6dfa9a53a84663ab5c6c377d2f4eadae0522aab0dbcd3ade85bfe9",
+      "source_sha256": "92090e7068339e5d6d8d0a1135a803dd5cbd9b4c3623525b6e98d4fb6288169b",
+      "source_dimensions": {
+        "width": 940,
+        "height": 1674
+      }
+    },
+    {
+      "key": "gap",
+      "orientation": "desktop",
+      "file": "assets/04_gap_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 306802,
+      "sha256": "bdf15c0b5cab3722e36caa0b9247fdebc38f02a54e1af4917b70b23d2a809f3b",
+      "source_sha256": "8b63e0cfaa86e67336a8f34388ba29b735dd39b023147f15123060be25d5d539",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "key": "gap",
+      "orientation": "mobile",
+      "file": "assets/04_gap_mobile.webp",
+      "width": 720,
+      "height": 1282,
+      "bytes": 371452,
+      "sha256": "aa2d9b27c0ec99fb87825c0dbc31b8e11e53afb9ccc8fb29617d8cd5bbd2b47f",
+      "source_sha256": "a018fb56701a8a8dd7b8eb940a18a1c2a5b744cc7509b8a48d882b4978627a8d",
+      "source_dimensions": {
+        "width": 940,
+        "height": 1674
+      }
+    },
+    {
+      "key": "descent",
+      "orientation": "desktop",
+      "file": "assets/05_descent_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 188706,
+      "sha256": "f8315ed3b8e57e064040c2a6114ded7376c73ba4d3abd940736e3805c0193ff0",
+      "source_sha256": "c5f98af78fd39cfc7a3d9d9fa0df89f4ed583b103f4ca6306475e33c803f3436",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "key": "descent",
+      "orientation": "mobile",
+      "file": "assets/05_descent_mobile.webp",
+      "width": 720,
+      "height": 1281,
+      "bytes": 213458,
+      "sha256": "2336f964b43120fae3279d52c13da936292cbe10a2055d82abd3d2e6f3ad2807",
+      "source_sha256": "9a89dee207e75415ca4eac81b90d4ab2bb6e9261497131fd628c441c154b1018",
+      "source_dimensions": {
+        "width": 940,
+        "height": 1673
+      }
+    }
+  ],
+  "original_image_bytes": 23310154,
+  "image_bytes": 3001450,
+  "export": {
+    "quality": 86,
+    "format": "WebP",
+    "resized": true,
+    "cropped": false
+  },
+  "variant_of": {
+    "release": "v5_silent",
+    "standalone_bytes": 31101897,
+    "standalone_sha256": "8339ec56cd002ae4f9e76fe53863311681be2978972347775f81dca19d84c2e7",
+    "preserved_archive": "mine_game_intro_v5_silent.zip",
+    "full_quality_download": "https://chatgpt.com/library?file_id=libfile_d70bb026216481919490860d0346e837&account_id=personal"
+  },
+  "loading": {
+    "initial_images": 1,
+    "max_owned_sources": 2,
+    "strategy": "current + next, or current + orientation replacement",
+    "end_releases_images": true,
+    "external_relative_assets": true,
+    "missing_image_holds_clock": true
+  }
+}

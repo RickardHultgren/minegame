@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "release": "v6_lite",
+  "total_ms": 40000,
+  "image_count": 10,
+  "image_bytes": 3001450,
+  "html_bytes": 24167,
+  "runtime_file_bytes": 3025617,
+  "max_owned_rgba_pixel_bytes_estimate": 7384320,
+  "previous_ten_image_rgba_pixel_bytes_estimate": 62934480,
+  "memory_limit": "Pixel arithmetic only; excludes browser caches, GPU copies, JS/DOM and decoder working buffers. Not measured native RAM.",
+  "html_sha256": "39eca7b1eed0d5f934142928d8b6ad4aa5c1e131ff987249a1b31e3af9c5f8c6"
+}

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="A short illustrated opening cinematic for Mine Game.">
+  <title>Mine Game — Lightweight Opening</title>
+  <style>
+    :root { color-scheme: dark; --ink:#080b10; --paper:#eee5d2; --muted:#a8b1b9; --rust:#c28b59; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none !important; }
+    html,body { margin:0; width:100%; height:100%; overflow:hidden; background:var(--ink); }
+    body { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--paper); overscroll-behavior:none; }
+    button,input { font:inherit; }
+    button { min-height:44px; min-width:44px; cursor:pointer; touch-action:manipulation; }
+    button:disabled { cursor:default; opacity:.45; }
+    button:focus-visible,input:focus-visible { outline:3px solid #f1c08f; outline-offset:5px; }
+    button { border:1px solid #48505a; border-radius:3px; color:var(--paper); background:#111720; padding:11px 17px; }
+    button:hover:not(:disabled) { border-color:#b0bac3; background:#1a222d; }
+    button.primary { color:#15110d; background:var(--paper); border-color:var(--paper); font-weight:650; }
+    button.primary:hover:not(:disabled) { background:#fff6e3; border-color:#fff6e3; }
+    .app { width:100%; height:100vh; height:100svh; height:100dvh; display:grid; grid-template-rows:minmax(0,1fr) auto; }
+    .stage { position:relative; min-height:0; overflow:hidden; isolation:isolate; background:#080b10; }
+    .screen,.beat { position:absolute; inset:0; }
+    .screen { display:grid; place-items:center; padding:max(28px,env(safe-area-inset-top)) max(25px,env(safe-area-inset-right)) 24px max(25px,env(safe-area-inset-left)); }
+    .panel { width:min(100%,620px); text-align:center; }
+    .eyebrow { margin:0 0 20px; font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); }
+    h1,.end-title { font-family:Georgia,"Times New Roman",serif; font-size:clamp(56px,10vw,118px); line-height:.91; font-weight:400; letter-spacing:-.055em; margin:0; }
+    h1 span,.end-title span { display:block; }
+    .rule { width:44px; height:2px; background:var(--rust); margin:26px auto; }
+    .entry-actions,.end-actions { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    #play { min-width:175px; }
+    .read-option { display:flex; align-items:center; gap:10px; justify-content:center; min-height:44px; margin:21px 0 0; font-size:14px; cursor:pointer; }
+    .read-option input { appearance:auto; width:19px; height:19px; accent-color:var(--rust); margin:0; }
+    .hint { color:var(--muted); font-size:12px; line-height:1.5; margin:8px auto 0; max-width:30ch; }
+    .loading { margin:20px 0 0; color:var(--muted); font-size:12px; min-height:18px; }
+    .beat { display:grid; place-items:center; opacity:0; }
+    .text-card { padding:30px max(28px,env(safe-area-inset-left)) 30px max(28px,env(safe-area-inset-right)); background:#080b10; }
+    .story { max-width:19ch; margin:0; text-align:center; font-family:Georgia,"Times New Roman",serif; font-size:clamp(27px,4.3vw,67px); font-weight:400; line-height:1.25; letter-spacing:-.025em; text-wrap:balance; }
+    .story strong { font-weight:400; color:#d9ac7b; white-space:nowrap; }
+    .illustration { overflow:hidden; }
+    .art-slot { width:100%; height:100%; overflow:hidden; }
+    .art-slot img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; transform:scale(var(--scale,1)); transform-origin:center; }
+    .controls { background:#0b0f15; border-top:1px solid #252c35; padding:0 max(12px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left)); z-index:3; }
+    .progress-track { height:2px; background:#252d36; margin:0 0 9px; }
+    .progress-fill { height:100%; width:0; background:var(--rust); }
+    .control-row { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:44px; }
+    .control-row button { padding:9px 12px; font-size:13px; }
+    .play-controls { margin-left:auto; display:flex; align-items:center; gap:8px; }
+    #pause { min-width:72px; }
+    .reading-controls { display:flex; justify-content:center; gap:10px; margin-top:8px; }
+    .reading-controls button { min-width:109px; font-size:13px; }
+    .time { margin-left:auto; font-size:11px; font-variant-numeric:tabular-nums; letter-spacing:.02em; color:var(--muted); white-space:nowrap; }
+    .scene-status { margin:0; color:var(--muted); font-size:12px; max-width:40ch; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+    @media (max-height:480px) {
+      .screen { padding-top:18px; padding-bottom:15px; }
+      h1,.end-title { font-size:clamp(43px,10vh,75px); }
+      .eyebrow { margin-bottom:12px; }
+      .rule { margin:15px auto; }
+      .entry-actions,.end-actions { margin-top:16px; }
+      .read-option { margin-top:10px; }
+      .hint { margin-top:0; }
+      .loading { margin-top:8px; }
+      .story { font-size:clamp(26px,7vh,42px); }
+    }
+    @media (prefers-reduced-motion:reduce) { .beat { will-change:auto; } .art-slot img { transform:none !important; } }
+  </style>
+</head>
+<body>
+<main class="app" id="app" data-state="entry" data-mode="timed" data-art="loading">
+  <section class="stage" id="stage" aria-label="Mine Game opening cinematic">
+    <section class="screen" id="entry" aria-labelledby="entry-title">
+      <div class="panel">
+        <p class="eyebrow">An opening cinematic</p>
+        <h1 id="entry-title"><span>MINE</span><span>GAME</span></h1>
+        <div class="rule" aria-hidden="true"></div>
+        <div class="entry-actions"><button class="primary" id="play" disabled>Play intro</button></div>
+        <label class="read-option"><input type="checkbox" id="read-mode"> <span>Read at my pace</span></label>
+        <p class="hint" id="mode-hint">40 seconds · text and illustrated scenes</p>
+        <p class="loading" id="load-status" role="status">Preparing artwork…</p>
+      </div>
+    </section>
+
+    <section class="beat text-card" id="card-views" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">They came for the views.</p></section>
+    <figure class="beat illustration" id="scene-live" data-kind="image" data-art-key="live" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="live"></div></figure>
+    <section class="beat text-card" id="card-legend" data-kind="text" data-duration="5000" hidden aria-hidden="true"><p class="story">“They say this mine was dug for goblin treasure.”</p></section>
+    <figure class="beat illustration" id="scene-legend" data-kind="image" data-art-key="legend" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="legend"></div></figure>
+    <section class="beat text-card" id="card-stream" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">A good story. A better livestream.</p></section>
+    <figure class="beat illustration" id="scene-cut" data-kind="image" data-art-key="cut" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="cut"></div></figure>
+    <section class="beat text-card" id="card-brave" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Nobody wanted to turn back first.</p></section>
+    <figure class="beat illustration" id="scene-gap" data-kind="image" data-art-key="gap" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="gap"></div></figure>
+    <section class="beat text-card" id="card-rolling" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">The camera kept rolling.</p></section>
+    <figure class="beat illustration" id="scene-descent" data-kind="image" data-art-key="descent" data-duration="6000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="descent"></div></figure>
+
+    <section class="screen" id="end" aria-labelledby="end-title" hidden>
+      <div class="panel">
+        <h2 class="end-title" id="end-title"><span>MINE</span><span>GAME</span></h2>
+        <div class="rule" aria-hidden="true"></div>
+        <div class="end-actions"><button class="primary" id="enter">Enter the mine</button><button id="replay">Replay intro</button></div>
+      </div>
+    </section>
+    <p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  <footer class="controls" aria-label="Playback controls">
+    <div class="progress-track" id="progress" role="progressbar" aria-label="Intro progress" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="control-row">
+      <p class="scene-status" id="scene-status" role="status" hidden></p>
+      <span class="time" id="time" aria-hidden="true">00:40</span>
+      <div class="play-controls" id="play-controls" hidden><button id="pause">Pause</button><button id="skip">Skip intro</button></div>
+    </div>
+    <div class="reading-controls" id="reading-controls" hidden><button id="back">Back</button><button id="next">Next</button></div>
+  </footer>
+</main>
+<noscript><p style="position:fixed;inset:0;background:#080b10;color:#eee5d2;padding:30px;z-index:10">JavaScript is needed to play this illustrated intro.</p></noscript>
+
+<!-- Lightweight derivative: relative WebPs, bounded current/next image ownership. -->
+<script id="art-data" type="application/json">
+{
+  "live":{"desktop":"assets/01_live_desktop.webp","mobile":"assets/01_live_mobile.webp","alt":"At the warning fence, the banana holder presents the mine to the tall friend's LIVE phone. The short friend poses beside his cutters; the doorway beyond is open."},
+  "legend":{"desktop":"assets/02_legend_desktop.webp","mobile":"assets/02_legend_mobile.webp","alt":"An ochre illustration of the tale being told: an unfinished excavation leads toward a faint, imagined treasure chest, suggesting a hoped-for hoard rather than a confirmed discovery."},
+  "cut":{"desktop":"assets/03_cut_desktop.webp","mobile":"assets/03_cut_mobile.webp","alt":"With one hand on each cutter handle, the short teenager parts the fence wire. The tall friend films while holding his magnet; the banana holder poses for viewers."},
+  "gap":{"desktop":"assets/04_gap_desktop.webp","mobile":"assets/04_gap_mobile.webp","alt":"The banana holder crouches beyond the gap. The tall friend ducks through with phone and magnet, while the short friend follows with closed cutters; their confidence is slipping."},
+  "descent":{"desktop":"assets/05_descent_desktop.webp","mobile":"assets/05_descent_mobile.webp","alt":"Seen from behind inside the mine, the three friends hesitate toward empty darkness. The tall friend keeps his phone recording and his magnet in hand."}
+}
+</script>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const ui = Object.fromEntries(['app','stage','entry','end','play','read-mode','mode-hint','load-status','scene-status','time','play-controls','reading-controls','pause','skip','back','next','enter','replay','announcement','progress','progress-fill'].map(id => [id,$(id)]));
+  const art = JSON.parse($('art-data').textContent);
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let startAt = 0;
+  const beats = [...document.querySelectorAll('.beat')].map((el,index) => {
+    const beat = {el,index,id:el.id,kind:el.dataset.kind,start:startAt,duration:Number(el.dataset.duration)};
+    startAt += beat.duration;
+    return beat;
+  });
+  const TOTAL = startAt;
+  const TOTAL_SECONDS = TOTAL/1000;
+  const formatTime = ms => '00:'+String(Math.ceil(ms/1000)).padStart(2,'0');
+  const state = {phase:'entry',mode:'timed',step:0,previousPhase:'playing',ready:false,failed:false,active:-1};
+  const clock = {base:0,origin:0};
+  // At most two images have owned sources: current + next, or current + replacement.
+  // Browser HTTP/decoded/GPU caches are outside this explicit ownership bound.
+  const images = new Map();
+  let shown = null, progressSecond = -1;
+  const running = () => state.phase==='playing' || state.phase==='reading';
+  const inSequence = () => running() || state.phase==='paused' || state.phase==='buffering';
+  const elapsed = (now=performance.now()) => clock.base + (running() ? now-clock.origin : 0);
+  const text = (element,value) => { if(element.textContent!==value)element.textContent=value; };
+  const hidden = (element,value) => { if(element.hidden!==value)element.hidden=value; };
+  const attribute = (element,name,value) => { if(element.getAttribute(name)!==value)element.setAttribute(name,value); };
+  function freeze(now=performance.now()) { if(running())clock.base=elapsed(now); }
+  function resetClock(value=0) { clock.base=value; clock.origin=performance.now(); }
+  function announce(value) { text(ui.announcement,value); }
+  function preferredArt() { const r=ui.stage.getBoundingClientRect(); return r.width<r.height?'mobile':'desktop'; }
+  function imageId(key,mode) { return mode+':'+key; }
+  function nextImage(beat) { return beats.find(b=>b.kind==='image' && (!beat || b.index>beat.index)); }
+  function clearSlots(except=null) {
+    for(const key of Object.keys(art)) {
+      const slot=document.querySelector('[data-slot="'+key+'"]');
+      if(slot.children.length && slot.children[0]!==except)slot.replaceChildren();
+    }
+  }
+  function release(entry) {
+    entry.disposed=true;
+    if(shown===entry) { clearSlots(); shown=null; }
+    entry.img.onload=null; entry.img.onerror=null;
+    entry.img.removeAttribute('src');
+    images.delete(entry.id);
+  }
+  function load(key,mode) {
+    const id=imageId(key,mode);
+    if(images.has(id))return images.get(id);
+    if(images.size>=2)return null;
+    const img=new Image();
+    const entry={id,key,mode,img,status:'loading',disposed:false};
+    images.set(id,entry);
+    img.alt=art[key].alt; img.decoding='async'; img.draggable=false;
+    img.onload=async()=>{
+      try {
+        if(img.decode)await img.decode();
+        if(entry.disposed)return;
+        entry.status='ready'; render();
+      } catch(_) {
+        if(entry.disposed)return;
+        entry.status='error'; render();
+      }
+    };
+    img.onerror=()=>{
+      if(entry.disposed)return;
+      entry.status='error'; render();
+    };
+    img.src=art[key][mode];
+    return entry;
+  }
+  function syncArt(beat) {
+    if(state.phase==='end') {
+      for(const entry of [...images.values()])release(entry);
+      clearSlots(); state.ready=false; state.failed=false;
+      return true;
+    }
+    const mode=preferredArt();
+    const target=state.phase==='entry'?beats[1]:(beat.kind==='image'?beat:nextImage(beat));
+    const key=target?.el.dataset.artKey;
+    const id=key?imageId(key,mode):null;
+    const exact=images.get(id);
+    const fallback=beat?.kind==='image' && shown?.key===key && shown.status==='ready'?shown:null;
+    const keep=new Set(id?[id]:[]);
+    // Rotation keeps the old art while its replacement decodes, occupying the spare slot.
+    if(fallback && exact?.status!=='ready')keep.add(fallback.id);
+    else if(beat?.kind==='image' && exact?.status==='ready') {
+      const upcoming=nextImage(beat);
+      if(upcoming)keep.add(imageId(upcoming.el.dataset.artKey,mode));
+    }
+    for(const entry of [...images.values()])if(!keep.has(entry.id))release(entry);
+    for(const wanted of keep) {
+      const [wantMode,wantKey]=wanted.split(':'); load(wantKey,wantMode);
+    }
+    const current=images.get(id);
+    const visible=current?.status==='ready'?current:fallback;
+    if(beat?.kind==='image' && visible && !visible.disposed) {
+      if(shown!==visible) {
+        clearSlots(visible.img);
+        document.querySelector('[data-slot="'+key+'"]').replaceChildren(visible.img);
+        shown=visible;
+      }
+      ui.app.dataset.art=visible.mode;
+    } else { clearSlots(); shown=null; }
+    state.ready=current?.status==='ready';
+    state.failed=current?.status==='error' && !visible;
+    if(state.phase==='entry') {
+      ui.play.disabled=!state.ready && !state.failed;
+      text(ui.play,state.failed?'Try again':'Play intro');
+      text(ui['load-status'],state.failed?'Artwork could not be loaded. Keep the assets folder beside index.html.':state.ready?'Ready when you are.':'Preparing first scene…');
+    }
+    return beat?.kind!=='image' || !!(visible && !visible.disposed);
+  }
+  function retryArt() {
+    for(const entry of [...images.values()])if(entry.status==='error')release(entry);
+    state.failed=false; render();
+  }
+  function hideBeats() {
+    for(const b of beats) { b.el.hidden=true; b.el.setAttribute('aria-hidden','true'); }
+    state.active=-1; ui.app.removeAttribute('data-beat');
+  }
+  function activeBeat(time) {
+    return state.mode==='reading'?beats[state.step]:beats.find(b=>time<b.start+b.duration)||beats[beats.length-1];
+  }
+  function render(now=performance.now()) {
+    let beat=inSequence()?activeBeat(elapsed(now)):null;
+    const available=syncArt(beat);
+    if(inSequence() && beat.kind==='image' && !available && running()) {
+      state.previousPhase=state.phase;
+      // Loading does not consume a beat or its fade. Wall time may exceed 40 seconds.
+      clock.base=state.mode==='reading'?0:beat.start;
+      state.phase='buffering';
+    } else if(state.phase==='buffering' && available && !document.hidden) {
+      state.phase=state.previousPhase; clock.origin=now;
+    }
+    if(ui.app.dataset.state!==state.phase)ui.app.dataset.state=state.phase;
+    if(ui.app.dataset.mode!==state.mode)ui.app.dataset.mode=state.mode;
+    const sequence=inSequence();
+    hidden(ui.entry,state.phase!=='entry'); hidden(ui.end,state.phase!=='end');
+    hidden(ui['play-controls'],!sequence);
+    hidden(ui['reading-controls'],!(sequence && state.mode==='reading'));
+    const retry=state.failed && sequence;
+    text(ui.pause,retry?'Try again':state.phase==='paused'?'Resume':'Pause');
+    attribute(ui.pause,'aria-label',retry?'Retry artwork':state.phase==='paused'?'Resume intro':'Pause intro');
+    const waiting=sequence && (state.phase==='buffering' || retry);
+    hidden(ui['scene-status'],!waiting);
+    text(ui['scene-status'],retry?'Artwork could not be loaded. Try again.':waiting?'Loading scene…':'');
+    if(!sequence) {
+      hideBeats(); hidden(ui.time,false); text(ui.time,formatTime(TOTAL));
+      ui['progress-fill'].style.width=state.phase==='end'?'100%':'0%';
+      attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS));
+      attribute(ui.progress,'aria-valuenow',state.phase==='end'?String(TOTAL_SECONDS):'0');
+      return;
+    }
+    const time=elapsed(now);
+    beat=activeBeat(time);
+    const local=state.mode==='reading'?time:time-beat.start;
+    if(state.active!==beat.index) {
+      for(const b of beats) { const active=b===beat; b.el.hidden=!active; b.el.setAttribute('aria-hidden',String(!active)); }
+      state.active=beat.index; ui.app.dataset.beat=beat.id;
+      announce(beat.kind==='text'?beat.el.textContent.trim():art[beat.el.dataset.artKey].alt);
+    }
+    const fade=motion.matches?0:250;
+    const fadeIn=fade?Math.min(1,Math.max(0,local)/fade):1;
+    const fadeOut=state.mode==='reading'||!fade?1:Math.min(1,Math.max(0,beat.duration-local)/fade);
+    const opacity=String(Math.min(fadeIn,fadeOut));
+    if(beat.el.style.opacity!==opacity)beat.el.style.opacity=opacity;
+    if(beat.kind==='image')beat.el.style.setProperty('--scale',String(motion.matches?1:1+.02*Math.min(1,Math.max(0,local)/beat.duration)));
+    if(ui.back.disabled!==(state.step===0))ui.back.disabled=state.step===0;
+    text(ui.next,state.step===beats.length-1?'Finish':'Next');
+    hidden(ui.time,true);
+    if(state.mode==='reading') {
+      ui['progress-fill'].style.width=((state.step+1)/beats.length*100)+'%';
+      attribute(ui.progress,'aria-valuemax',String(beats.length)); attribute(ui.progress,'aria-valuenow',String(state.step+1));
+    } else {
+      ui['progress-fill'].style.width=(Math.min(1,time/TOTAL)*100)+'%';
+      const second=Math.floor(Math.min(time,TOTAL)/1000);
+      if(second!==progressSecond) { progressSecond=second; attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS)); attribute(ui.progress,'aria-valuenow',String(second)); }
+    }
+  }
+  function finish() {
+    if(state.phase==='end')return;
+    freeze(); state.phase='end'; clock.base=TOTAL;
+    render(); announce('MINE GAME. Intro complete.'); ui.enter.focus({preventScroll:true});
+  }
+  function start() {
+    if((state.phase==='entry' && !state.ready) || (state.phase!=='entry' && state.phase!=='end'))return;
+    progressSecond=-1;
+    state.mode=ui['read-mode'].checked?'reading':'timed'; state.step=0;
+    state.phase=state.mode==='reading'?'reading':'playing'; state.previousPhase=state.phase;
+    resetClock(); render(); ui.pause.focus({preventScroll:true});
+  }
+  function pause(fromBackground=false) {
+    if(!running() && state.phase!=='buffering')return;
+    const now=performance.now();
+    if(state.mode==='timed' && elapsed(now)>=TOTAL) { finish(); return; }
+    if(running()) { freeze(now); state.previousPhase=state.phase; }
+    state.phase='paused'; render();
+    announce(fromBackground?'Intro paused while the page was in the background. Activate Resume to continue.':'Intro paused.');
+  }
+  function resume() {
+    if(state.phase!=='paused')return;
+    state.phase=state.previousPhase; clock.origin=performance.now(); render();
+  }
+  function togglePause() { if(state.failed)retryArt(); else if(state.phase==='paused')resume(); else pause(); }
+  function step(direction) {
+    if(state.mode!=='reading' || !inSequence())return;
+    const next=state.step+direction;
+    if(next>=beats.length) { finish(); return; }
+    if(next<0)return;
+    state.step=next; state.phase='reading'; state.previousPhase='reading'; resetClock(); render();
+  }
+  function frame() {
+    // Always sample the fresh clock; a shared RAF timestamp can already be stale.
+    const now=performance.now();
+    if(running() && state.mode==='timed' && elapsed(now)>=TOTAL)finish();
+    else if(running())render(now);
+    requestAnimationFrame(frame);
+  }
+  ui.play.addEventListener('click',()=>state.failed?retryArt():start());
+  ui.replay.addEventListener('click',start);
+  ui.pause.addEventListener('click',togglePause);
+  ui.skip.addEventListener('click',finish);
+  ui.back.addEventListener('click',()=>step(-1));
+  ui.next.addEventListener('click',()=>step(1));
+  ui['read-mode'].addEventListener('change',()=>{ ui['mode-hint'].textContent=ui['read-mode'].checked?'Each card and image waits for Next.':'40 seconds · text and illustrated scenes'; });
+  ui.enter.addEventListener('click',()=>{ window.dispatchEvent(new CustomEvent('minegame:start',{detail:{source:'mine-game-intro',mode:state.mode}})); announce('Game start requested.'); });
+  document.addEventListener('visibilitychange',()=>{ if(document.hidden)pause(true); });
+  window.addEventListener('pagehide',()=>pause(true));
+  document.addEventListener('keydown',event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+    const sequence=inSequence();
+    if(event.key==='Escape' && sequence) { event.preventDefault(); finish(); return; }
+    if(event.target.closest('button,input,select,textarea,a,[contenteditable="true"]'))return;
+    if(event.code==='Space' && sequence) { event.preventDefault(); togglePause(); }
+    else if(event.key==='ArrowRight' && sequence && state.mode==='reading') { event.preventDefault(); step(1); }
+    else if(event.key==='ArrowLeft' && sequence && state.mode==='reading') { event.preventDefault(); step(-1); }
+  });
+  if(window.ResizeObserver)new ResizeObserver(()=>render()).observe(ui.stage);
+  else window.addEventListener('resize',()=>render());
+  motion.addEventListener?.('change',()=>render());
+  render(); requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

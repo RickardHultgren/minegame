@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "release": "v6_lite",
+  "scope": "production JS in a deterministic DOM; not native layout or RAM measurement",
+  "runtime_sha256": "1c34cdeed5904b8731bd731a54351ed30c6e6e8f8841e4493a2f1825796b73ae",
+  "audio_attempts": 0,
+  "max_owned_images": 2,
+  "cases": [
+    {
+      "name": "Entry waits for just the first scene and does not eagerly allocate five images",
+      "status": "passed"
+    },
+    {
+      "name": "All ten exclusive beats keep exact boundaries and the title holds at 40000ms",
+      "status": "passed"
+    },
+    {
+      "name": "Fades, bounded zoom, text/art exclusion and per-beat announcements are retained",
+      "status": "passed"
+    },
+    {
+      "name": "Pause/Resume retain elapsed time and zoom",
+      "status": "passed"
+    },
+    {
+      "name": "Visibility and pagehide require explicit Resume",
+      "status": "passed"
+    },
+    {
+      "name": "Slow art freezes the cinematic at its image boundary, without consuming its fade",
+      "status": "passed"
+    },
+    {
+      "name": "Pause or background during buffering prevents auto-resume when decoding completes",
+      "status": "passed"
+    },
+    {
+      "name": "Reading holds every card/image, supports Back and waits for Finish",
+      "status": "passed"
+    },
+    {
+      "name": "Native keyboard controls, Space, Escape and reading arrows are preserved",
+      "status": "passed"
+    },
+    {
+      "name": "Paused rotation retains visible old art, beat, time and zoom during replacement",
+      "status": "passed"
+    },
+    {
+      "name": "Playing rotation uses actual stage aspect and never resets progress",
+      "status": "passed"
+    },
+    {
+      "name": "Rapid rotations and reading navigation abort obsolete sources; stale loads never win",
+      "status": "passed"
+    },
+    {
+      "name": "Loading failure exposes retry and does not strand the clock or navigation",
+      "status": "passed"
+    },
+    {
+      "name": "Repeated Skip/Replay clears owned art, keeps mode, one RAF and stable listeners",
+      "status": "passed"
+    },
+    {
+      "name": "Reduced motion removes fades/zoom, including changes during playback",
+      "status": "passed"
+    },
+    {
+      "name": "Fresh callback time handles stale RAF timestamps; start hook fires once per activation",
+      "status": "passed"
+    },
+    {
+      "name": "Every tested path owns at most two sourced images and uses no audio engine",
+      "status": "passed"
+    }
+  ]
+}
