@@ -1,18 +1,25 @@
 {
-  "release": "v6_lite",
+  "release": "v7_fall_lite",
   "audio_enabled": false,
-  "total_ms": 40000,
+  "total_ms": 58000,
   "assets": [
     {
       "key": "live",
       "orientation": "desktop",
       "file": "assets/01_live_desktop.webp",
       "width": 1280,
-      "height": 720,
-      "bytes": 280570,
-      "sha256": "7c613b357aecf4b0b9ff868cdb8de741aa8bb080bf572e0ec9a5fbe91051fb96",
-      "source_sha256": "642579140d728a109eba13a5ec4c844aea6d5e77a3a1bad4d7e91fca1f46f44f",
+      "height": 721,
+      "bytes": 261500,
+      "sha256": "90184d8dce895196571625166f66368ba8a697f0b4372bd8cccc6c8e95775931",
+      "source_sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28",
       "source_dimensions": {
+        "width": 1671,
+        "height": 941
+      },
+      "previous_source_sha256": "642579140d728a109eba13a5ec4c844aea6d5e77a3a1bad4d7e91fca1f46f44f",
+      "source_file": "01_live_desktop.png",
+      "source_role": "shoulder-correction-original",
+      "previous_source_dimensions": {
         "width": 1672,
         "height": 941
       }
@@ -22,11 +29,18 @@
       "orientation": "mobile",
       "file": "assets/01_live_mobile.webp",
       "width": 720,
-      "height": 1282,
-      "bytes": 341242,
-      "sha256": "a8f431302d68ba303cb00f6378425cc978bffa35cfc2c3ad8e477554d33b8b35",
-      "source_sha256": "2c97b6b2d943ae400f0b9b0ea19fac6bd8bea96b61dff8bc5a031374ab50768b",
+      "height": 1281,
+      "bytes": 296854,
+      "sha256": "fa80cab08e76a65d17304b0624fc24e19fa5b71176f7af71284b9cc252d3eccb",
+      "source_sha256": "3a7d4a85d62866f146fcc3c331c0147c8b07794cba4194684162669e156a24f7",
       "source_dimensions": {
+        "width": 940,
+        "height": 1673
+      },
+      "previous_source_sha256": "2c97b6b2d943ae400f0b9b0ea19fac6bd8bea96b61dff8bc5a031374ab50768b",
+      "source_file": "01_live_mobile.png",
+      "source_role": "shoulder-correction-original",
+      "previous_source_dimensions": {
         "width": 940,
         "height": 1674
       }
@@ -92,65 +106,394 @@
       "orientation": "desktop",
       "file": "assets/04_gap_desktop.webp",
       "width": 1280,
-      "height": 720,
-      "bytes": 306802,
-      "sha256": "bdf15c0b5cab3722e36caa0b9247fdebc38f02a54e1af4917b70b23d2a809f3b",
-      "source_sha256": "8b63e0cfaa86e67336a8f34388ba29b735dd39b023147f15123060be25d5d539",
+      "height": 721,
+      "bytes": 308762,
+      "sha256": "a95c5c153a68bf95bd451d8fb31197ff860e7bdcef446754cf28427d74df7951",
+      "source_sha256": "842d3189257a389417868a18e13f224fd3927443632c6dab40ce46ac761f1f3a",
       "source_dimensions": {
+        "width": 1671,
+        "height": 941
+      },
+      "previous_source_sha256": "8b63e0cfaa86e67336a8f34388ba29b735dd39b023147f15123060be25d5d539",
+      "previous_source_dimensions": {
         "width": 1672,
         "height": 941
-      }
+      },
+      "source_file": "04_gap_desktop.png",
+      "source_role": "anatomy-correction-original"
     },
     {
       "key": "gap",
       "orientation": "mobile",
       "file": "assets/04_gap_mobile.webp",
       "width": 720,
-      "height": 1282,
-      "bytes": 371452,
-      "sha256": "aa2d9b27c0ec99fb87825c0dbc31b8e11e53afb9ccc8fb29617d8cd5bbd2b47f",
-      "source_sha256": "a018fb56701a8a8dd7b8eb940a18a1c2a5b744cc7509b8a48d882b4978627a8d",
-      "source_dimensions": {
-        "width": 940,
-        "height": 1674
-      }
-    },
-    {
-      "key": "descent",
-      "orientation": "desktop",
-      "file": "assets/05_descent_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 188706,
-      "sha256": "f8315ed3b8e57e064040c2a6114ded7376c73ba4d3abd940736e3805c0193ff0",
-      "source_sha256": "c5f98af78fd39cfc7a3d9d9fa0df89f4ed583b103f4ca6306475e33c803f3436",
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
-      }
-    },
-    {
-      "key": "descent",
-      "orientation": "mobile",
-      "file": "assets/05_descent_mobile.webp",
-      "width": 720,
       "height": 1281,
-      "bytes": 213458,
-      "sha256": "2336f964b43120fae3279d52c13da936292cbe10a2055d82abd3d2e6f3ad2807",
-      "source_sha256": "9a89dee207e75415ca4eac81b90d4ab2bb6e9261497131fd628c441c154b1018",
+      "bytes": 342488,
+      "sha256": "1fd15a36627ec55505434afff8be2511f864ae85bc60f40f5e0c98489826824e",
+      "source_sha256": "614e835db60b4cb6dd561ad6746057d5d6bc16adf2d6012d191e973bcbdadf95",
       "source_dimensions": {
         "width": 940,
         "height": 1673
+      },
+      "previous_source_sha256": "a018fb56701a8a8dd7b8eb940a18a1c2a5b744cc7509b8a48d882b4978627a8d",
+      "previous_source_dimensions": {
+        "width": 940,
+        "height": 1674
+      },
+      "source_file": "04_gap_mobile.png",
+      "source_role": "anatomy-correction-original"
+    },
+    {
+      "key": "warning",
+      "orientation": "desktop",
+      "file": "assets/05_warning_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 278882,
+      "sha256": "41244a620b8582584b206bf34d26891f1bd96cfa653a54d318d5c0a82cb5d6d0",
+      "source_file": "05_warning_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "source_bytes": 3046655,
+      "generation_request_id": "05_warning_desktop_fix_hands",
+      "selected_generation": "generated_images/exec-48856bbc-aa20-43d8-9b69-4b79acdfae00.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-3b2aaa1d-c659-497d-96ff-47b68f2d8695.png",
+          "role": "edit target: rejected warning draft",
+          "sha256": "b28e3ccad82d987d93f67b650bf981a207b8ee7076ff506f8a1930723bd79a85"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
+          "role": "current repaired live anatomy/hand ownership reference",
+          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+        }
+      ],
+      "visual_review": "Approved after correcting swapped phone/magnet hands and removing a handset logo. All six shoes share the timber patch; dipping board and grit visible; shoulders and free hands readable.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "warning",
+      "orientation": "mobile",
+      "file": "assets/05_warning_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 312136,
+      "sha256": "0906bc08654fdf019b4e7f9aae09b36464c763b8aae3a6b312fea41dac567b6c",
+      "source_file": "05_warning_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "3bf54e873bd666abfb2a6e1b60796c6475e7df2976d9d4284b14b29db3c779a1",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "source_bytes": 3281198,
+      "generation_request_id": "05_warning_mobile",
+      "selected_generation": "generated_images/exec-621c1659-2c55-4a3e-83a4-5130c58bf257.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
+          "role": "approved warning desktop for same-event portrait recomposition",
+          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
+          "role": "current repaired live character/anatomy reference",
+          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+        }
+      ],
+      "visual_review": "Approved deliberately recomposed 9:16 group. All three full figures and six shoes on one patch; correct hands, unbranded handset back, deflated gum and readable board warning.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "giveway",
+      "orientation": "desktop",
+      "file": "assets/06_giveway_desktop.webp",
+      "width": 1280,
+      "height": 721,
+      "bytes": 300198,
+      "sha256": "972f560b5f0700bac6634a88586b7f5069c1b66c7aa465ef9a99638350ae9bae",
+      "source_file": "06_giveway_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d",
+      "source_dimensions": {
+        "width": 1671,
+        "height": 941
+      },
+      "source_bytes": 3163186,
+      "generation_request_id": "06_giveway_desktop_fix_contact",
+      "selected_generation": "generated_images/exec-4914e896-f023-4c1c-9f32-05764cc8950f.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-cf1b5196-731a-41e2-b9a7-a72bffb6ad56.png",
+          "role": "edit target: rejected giveway draft",
+          "sha256": "82e53fd82fa2f979d159cecaf095e91282e8094c31620ab3d265140d11df986f"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
+          "role": "approved warning character/style reference",
+          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+        }
+      ],
+      "visual_review": "Selected corrected helper contact: purple left hand to bandana left forearm, four hands total between helpers, retained right-hand props. Tall right phone/left magnet; hair margin restored; local floor break and short chute visible.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "giveway",
+      "orientation": "mobile",
+      "file": "assets/06_giveway_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 299006,
+      "sha256": "feff9cbfbb4fa91a6c5ee3734eec9a7d6297ee7aff8819dce397c42c52bfd0ff",
+      "source_file": "06_giveway_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "f78dfd4fe55ad24d6ddee146cd143a194987efdb7b1e9d61c471704b546fcd21",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "source_bytes": 3200341,
+      "generation_request_id": "06_giveway_mobile",
+      "selected_generation": "generated_images/exec-f6f6dcdb-cf6f-4707-8020-a649fad728b6.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_desktop.png",
+          "role": "approved giveway desktop corrected contact/event",
+          "sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_mobile.png",
+          "role": "approved warning mobile portrait/environment reference",
+          "sha256": "3bf54e873bd666abfb2a6e1b60796c6475e7df2976d9d4284b14b29db3c779a1"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/04_gap_desktop.png",
+          "role": "current repaired gap character/anatomy reference",
+          "sha256": "842d3189257a389417868a18e13f224fd3927443632c6dab40ce46ac761f1f3a"
+        }
+      ],
+      "visual_review": "Approved portrait recomposition of the repaired helping contact; correct four helper hands and two tall hands; all figures/props within frame; localized tilted plank patch and chute head clear.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "slide",
+      "orientation": "desktop",
+      "file": "assets/07_slide_desktop.webp",
+      "width": 1280,
+      "height": 722,
+      "bytes": 323130,
+      "sha256": "880203b4e867bd5628b75677c5383eaf15ddf4a049dccc8eebf571f54a69e12e",
+      "source_file": "07_slide_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f",
+      "source_dimensions": {
+        "width": 1670,
+        "height": 942
+      },
+      "source_bytes": 3364664,
+      "generation_request_id": "07_slide_desktop",
+      "selected_generation": "generated_images/exec-0f804020-6123-41c1-aec1-1c467db42140.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_desktop.png",
+          "role": "approved giveway desktop geography/props reference",
+          "sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/04_gap_desktop.png",
+          "role": "current repaired gap character/anatomy reference",
+          "sha256": "842d3189257a389417868a18e13f224fd3927443632c6dab40ce46ac761f1f3a"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
+          "role": "approved warning desktop environment reference",
+          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+        }
+      ],
+      "visual_review": "Approved short diagonal gravel slide, low feet-first poses, near dry landing; helping grip released. Purple/banana free left palms brace; tall holds right phone and left magnet without extra hand. Same broken rim and entrance spill.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "slide",
+      "orientation": "mobile",
+      "file": "assets/07_slide_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 333026,
+      "sha256": "bbf718d4e9096ba53287cc33d78551d734f9c809c35668358916aa5b61ed8898",
+      "source_file": "07_slide_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "8aa7409f088a0f909b8d5d498ea5d549b4806196c964563164611b35472ab723",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1671
+      },
+      "source_bytes": 3429447,
+      "generation_request_id": "07_slide_mobile_fix_canvas",
+      "selected_generation": "generated_images/exec-086ac010-8bbf-43a1-9c00-44753e78c318.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_mobile.png",
+          "role": "approved 9:16 portrait canvas reference",
+          "sha256": "f78dfd4fe55ad24d6ddee146cd143a194987efdb7b1e9d61c471704b546fcd21"
+        },
+        {
+          "file": "generated_images/exec-1f3cf557-420d-4959-8e94-4a546b93089a.png",
+          "role": "rejected wider slide draft pose/content reference",
+          "sha256": "00582754e6ea4a1a63e60c6457d0766fc81021c61099c17ef46e6af52c28ae8e"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/07_slide_desktop.png",
+          "role": "approved slide desktop event/landing reference",
+          "sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f"
+        }
+      ],
+      "visual_review": "Selected true narrow 9:16 recomposition after rejecting a wider native draft. All figures, six shoes and owned props fit; released contact and left-palm bracing clear; short chute and nearby landing retained.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "below",
+      "orientation": "desktop",
+      "file": "assets/08_below_desktop.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 219640,
+      "sha256": "820554f24600c979a8663ad25e9bbc4b19c13f6e0bf917c3bff24c0d2b1cfec6",
+      "source_file": "08_below_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "5964d7d553405f99e22c9a3167361a17de3f53f8478368b419cdc808e03be653",
+      "source_dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "source_bytes": 2787620,
+      "generation_request_id": "08_below_desktop",
+      "selected_generation": "generated_images/exec-4d09aef4-a274-4223-afad-29ad3da4bd67.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/07_slide_desktop.png",
+          "role": "approved slide desktop landing/geography/props reference",
+          "sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
+          "role": "current repaired live character/shoulder reference",
+          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+        }
+      ],
+      "visual_review": "Approved trio regrouped on dry gravel with retained right/left props and readable faces; same broken rim/chute high-left, natural uncarved rock arch over black water ahead-right, far end lost in darkness. No new lore/creature or light source.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "below",
+      "orientation": "mobile",
+      "file": "assets/08_below_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 266370,
+      "sha256": "0d78d498746d9b0aeb18fb7c91fbdf3aca7abace0d51797e2d40ef7b0eb0a168",
+      "source_file": "08_below_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "871a7e922760846ffaf08c95d083698ea2f8cb745cf2f7dfc64077e76b05054c",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "source_bytes": 3042629,
+      "generation_request_id": "08_below_mobile_fix_canvas",
+      "selected_generation": "generated_images/exec-d210d5ae-59a4-4833-acff-3278e24d263d.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/07_slide_mobile.png",
+          "role": "approved true 9:16 canvas reference",
+          "sha256": "8aa7409f088a0f909b8d5d498ea5d549b4806196c964563164611b35472ab723"
+        },
+        {
+          "file": "generated_images/exec-051f8298-f5f1-4dcb-af7a-d5b64d5a8320.png",
+          "role": "rejected wider below draft content reference",
+          "sha256": "960a2ae562aa475f57b8c789de12809662f166f7b192d628a571db10e6edbc62"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/08_below_desktop.png",
+          "role": "approved below desktop world/pose reference",
+          "sha256": "5964d7d553405f99e22c9a3167361a17de3f53f8478368b419cdc808e03be653"
+        }
+      ],
+      "visual_review": "Selected corrected true 9:16 recompose with complete trio on dry bank, retained correct hands/props, same opening/chute high-left and natural arch/water ahead-right. Far span remains dark and unexplained.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
       }
     }
   ],
   "original_image_bytes": 23310154,
-  "image_bytes": 3001450,
+  "image_bytes": 4841212,
   "export": {
     "quality": 86,
     "format": "WebP",
     "resized": true,
-    "cropped": false
+    "cropped": false,
+    "method": 6,
+    "protected_existing_exports": 8,
+    "new_selected_exports": 8
   },
   "variant_of": {
     "release": "v5_silent",
@@ -166,5 +509,83 @@
     "end_releases_images": true,
     "external_relative_assets": true,
     "missing_image_holds_clock": true
+  },
+  "art_revision": "v7_fall_lite_selected_art",
+  "art_revision_scope": "Retain all eight repaired live/legend/cut/gap WebPs exactly; add eight selected warning/giveway/slide/below WebPs. Retire descent from runtime; selected native PNGs remain outside the lightweight root.",
+  "art_revision_history": [
+    {
+      "revision": "v6_lite_shoulder_fix",
+      "scope": "Only scene live desktop/mobile: tall teenager left shoulder, sleeve and upper arm attachment. Eight other image payloads and player source are unchanged."
+    },
+    {
+      "revision": "v6_lite_gap_arm_fix",
+      "scope": "Only 04_gap desktop/mobile: correct tall teenager left magnet arm from far shoulder/sleeve instead of the back/bottom shirt hem. Phone remains in right hand. Eight other image payloads and index.html remain unchanged."
+    }
+  ],
+  "art_stage": {
+    "revision": "v7_fall_lite",
+    "status": "selected_art_checked_and_integrated",
+    "source_checkpoint": "mine_game_intro_v7_fall_art_checkpoint.zip",
+    "source_checkpoint_sha256": "2aa27150eb734db51051a51bfd2018e5086679740513ff0e2c2a8d0ab2a83bc3",
+    "selected_new_image_count": 8,
+    "selected_new_image_bytes": 2332388,
+    "selected_native_originals": "../mine_intro_v7_fall_art_source/originals/",
+    "active_art_order": [
+      "live",
+      "legend",
+      "cut",
+      "gap",
+      "warning",
+      "giveway",
+      "slide",
+      "below"
+    ],
+    "art_review": "production/art_review.json",
+    "note": "Art review records the completed preceding art-only stage. Current player implementation status is recorded separately in verification.md and production/integration_report.json."
+  },
+  "beat_count": 16,
+  "image_beat_count": 8,
+  "art_key_count": 8,
+  "active_image_file_count": 16,
+  "original_image_bytes_scope": "Historical v5_silent ten-image source total; not the source-byte total for the eight-event v7 revision.",
+  "baseline": {
+    "source_name": "mine_game_intro_v6_lite.zip",
+    "source_bytes": 2938631,
+    "source_sha256": "307082f65bd84cb16677a1cf1d5c279d0ecfd3fd63722d254d8abb08e1f9fc6c",
+    "library_file_id": "libfile_f9e0b327b95c819183288a1e1414fd29",
+    "library_version": "2",
+    "recoverable_location": "../backups/v6_before_fall_revision/mine_game_intro_v6_lite.zip"
+  },
+  "retired_art": {
+    "key": "descent",
+    "active": false,
+    "preserved_in": "v6 baseline archive outside runtime root",
+    "files": [
+      "assets/05_descent_desktop.webp",
+      "assets/05_descent_mobile.webp"
+    ]
+  },
+  "implementation": {
+    "status": "checked_silent_intro_with_native_browser_limits",
+    "total_ms": 58000,
+    "timed_entry_and_title": false,
+    "cards": 8,
+    "image_events": 8,
+    "final_visual_verification": "exports_reviewed_native_player_access_blocked",
+    "final_packaging": "checked_separate_runtime_and_art_source_archives",
+    "gameplay_implemented": false,
+    "reports": [
+      "file_checks.json",
+      "runtime_checks.json",
+      "production/integration_report.json"
+    ],
+    "verification_reports": [
+      "verification.md",
+      "production/art_review.json",
+      "production/browser_review.json",
+      "file_checks.json",
+      "runtime_checks.json"
+    ],
+    "packaging_report": "production/package_checks.json"
   }
 }

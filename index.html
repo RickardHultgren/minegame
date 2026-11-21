@@ -78,7 +78,7 @@
         <div class="rule" aria-hidden="true"></div>
         <div class="entry-actions"><button class="primary" id="play" disabled>Play intro</button></div>
         <label class="read-option"><input type="checkbox" id="read-mode"> <span>Read at my pace</span></label>
-        <p class="hint" id="mode-hint">40 seconds · text and illustrated scenes</p>
+        <p class="hint" id="mode-hint">58 seconds · text and illustrated scenes</p>
         <p class="loading" id="load-status" role="status">Preparing artwork…</p>
       </div>
     </section>
@@ -92,7 +92,13 @@
     <section class="beat text-card" id="card-brave" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Nobody wanted to turn back first.</p></section>
     <figure class="beat illustration" id="scene-gap" data-kind="image" data-art-key="gap" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="gap"></div></figure>
     <section class="beat text-card" id="card-rolling" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">The camera kept rolling.</p></section>
-    <figure class="beat illustration" id="scene-descent" data-kind="image" data-art-key="descent" data-duration="6000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="descent"></div></figure>
+    <figure class="beat illustration" id="scene-warning" data-kind="image" data-art-key="warning" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="warning"></div></figure>
+    <section class="beat text-card" id="card-floor" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Then the floor moved.</p></section>
+    <figure class="beat illustration" id="scene-giveway" data-kind="image" data-art-key="giveway" data-duration="3000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="giveway"></div></figure>
+    <section class="beat text-card" id="card-posing" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Nobody was posing now.</p></section>
+    <figure class="beat illustration" id="scene-slide" data-kind="image" data-art-key="slide" data-duration="3000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="slide"></div></figure>
+    <section class="beat text-card" id="card-below" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">They had no idea what lay below.</p></section>
+    <figure class="beat illustration" id="scene-below" data-kind="image" data-art-key="below" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="below"></div></figure>
 
     <section class="screen" id="end" aria-labelledby="end-title" hidden>
       <div class="panel">
@@ -104,10 +110,10 @@
     <p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
   </section>
   <footer class="controls" aria-label="Playback controls">
-    <div class="progress-track" id="progress" role="progressbar" aria-label="Intro progress" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-track" id="progress" role="progressbar" aria-label="Intro progress" aria-valuemin="0" aria-valuemax="58" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="control-row">
       <p class="scene-status" id="scene-status" role="status" hidden></p>
-      <span class="time" id="time" aria-hidden="true">00:40</span>
+      <span class="time" id="time" aria-hidden="true">00:58</span>
       <div class="play-controls" id="play-controls" hidden><button id="pause">Pause</button><button id="skip">Skip intro</button></div>
     </div>
     <div class="reading-controls" id="reading-controls" hidden><button id="back">Back</button><button id="next">Next</button></div>
@@ -122,7 +128,10 @@
   "legend":{"desktop":"assets/02_legend_desktop.webp","mobile":"assets/02_legend_mobile.webp","alt":"An ochre illustration of the tale being told: an unfinished excavation leads toward a faint, imagined treasure chest, suggesting a hoped-for hoard rather than a confirmed discovery."},
   "cut":{"desktop":"assets/03_cut_desktop.webp","mobile":"assets/03_cut_mobile.webp","alt":"With one hand on each cutter handle, the short teenager parts the fence wire. The tall friend films while holding his magnet; the banana holder poses for viewers."},
   "gap":{"desktop":"assets/04_gap_desktop.webp","mobile":"assets/04_gap_mobile.webp","alt":"The banana holder crouches beyond the gap. The tall friend ducks through with phone and magnet, while the short friend follows with closed cutters; their confidence is slipping."},
-  "descent":{"desktop":"assets/05_descent_desktop.webp","mobile":"assets/05_descent_mobile.webp","alt":"Seen from behind inside the mine, the three friends hesitate toward empty darkness. The tall friend keeps his phone recording and his magnet in hand."}
+  "warning":{"desktop":"assets/05_warning_desktop.webp","mobile":"assets/05_warning_mobile.webp","alt":"The three friends crowd together for the phone. A board dips beneath the bandana teenager's heel as grit slips through the mine floor."},
+  "giveway":{"desktop":"assets/06_giveway_desktop.webp","mobile":"assets/06_giveway_mobile.webp","alt":"The purple teenager reaches for his friend's free forearm as the small timber patch gives way beneath all three. The tall teenager still holds his phone and magnet."},
+  "slide":{"desktop":"assets/07_slide_desktop.webp","mobile":"assets/07_slide_mobile.webp","alt":"All three slide down a short gravel chute toward a nearby dry landing, keeping their props as the broken floor remains above."},
+  "below":{"desktop":"assets/08_below_desktop.webp","mobile":"assets/08_below_mobile.webp","alt":"The friends regroup on a dry gravel bank beneath the opening. Ahead, a huge natural stone arch spans black water and disappears into darkness."}
 }
 </script>
 <script>
@@ -255,7 +264,7 @@
     const available=syncArt(beat);
     if(inSequence() && beat.kind==='image' && !available && running()) {
       state.previousPhase=state.phase;
-      // Loading does not consume a beat or its fade. Wall time may exceed 40 seconds.
+      // Loading does not consume a beat or its fade. Wall time may exceed the logical duration.
       clock.base=state.mode==='reading'?0:beat.start;
       state.phase='buffering';
     } else if(state.phase==='buffering' && available && !document.hidden) {
@@ -351,7 +360,7 @@
   ui.skip.addEventListener('click',finish);
   ui.back.addEventListener('click',()=>step(-1));
   ui.next.addEventListener('click',()=>step(1));
-  ui['read-mode'].addEventListener('change',()=>{ ui['mode-hint'].textContent=ui['read-mode'].checked?'Each card and image waits for Next.':'40 seconds · text and illustrated scenes'; });
+  ui['read-mode'].addEventListener('change',()=>{ ui['mode-hint'].textContent=ui['read-mode'].checked?'Each card and image waits for Next.':TOTAL_SECONDS+' seconds · text and illustrated scenes'; });
   ui.enter.addEventListener('click',()=>{ window.dispatchEvent(new CustomEvent('minegame:start',{detail:{source:'mine-game-intro',mode:state.mode}})); announce('Game start requested.'); });
   document.addEventListener('visibilitychange',()=>{ if(document.hidden)pause(true); });
   window.addEventListener('pagehide',()=>pause(true));
