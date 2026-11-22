@@ -314,36 +314,32 @@
       "file": "assets/07_slide_desktop.webp",
       "width": 1280,
       "height": 722,
-      "bytes": 323130,
-      "sha256": "880203b4e867bd5628b75677c5383eaf15ddf4a049dccc8eebf571f54a69e12e",
+      "bytes": 71482,
+      "sha256": "fbf5fc897a3c1630515f35f6a3344bbbc069a6b5c25738e4e5164e96af034dfe",
       "source_file": "07_slide_desktop.png",
       "source_role": "v7_fall_selected_native_png",
-      "source_sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f",
+      "source_sha256": "ac27a7284881ccc109ae9fead339fccca8f2628a28dc88b208245a141784e3a7",
       "source_dimensions": {
         "width": 1670,
         "height": 942
       },
-      "source_bytes": 3364664,
-      "generation_request_id": "07_slide_desktop",
-      "selected_generation": "generated_images/exec-0f804020-6123-41c1-aec1-1c467db42140.png",
+      "source_bytes": 1650980,
+      "generation_request_id": "eye07_desktop_final",
+      "selected_generation": "generated_images/exec-c3477a31-10e9-4a90-863d-195d88a19861.png",
       "reference_roles": [
         {
-          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_desktop.png",
-          "role": "approved giveway desktop geography/props reference",
-          "sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d"
+          "file": "generated_images/exec-6635937d-12dd-43c7-b354-52a08a3b8332.png",
+          "role": "edit target",
+          "sha256": "bc815e67bb558fc80a220d4142601f66b1c7b8782592eb2e7ec8744e0872dc89"
         },
         {
-          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/04_gap_desktop.png",
-          "role": "current repaired gap character/anatomy reference",
-          "sha256": "842d3189257a389417868a18e13f224fd3927443632c6dab40ce46ac761f1f3a"
-        },
-        {
-          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
-          "role": "approved warning desktop environment reference",
-          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+          "file": "tmp/v7_eye_qa/07_mobile_inspection.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "d2b2b404ad09821817ac20a81be3d3023d0d7f312aa21395a1c853419b6ad982",
+          "note": "Inspection-only magnified crop; no manual pixel painting of final artwork. Referenced solely to locate/refine eyes."
         }
       ],
-      "visual_review": "Approved short diagonal gravel slide, low feet-first poses, near dry landing; helping grip released. Purple/banana free left palms brace; tall holds right phone and left magnet without extra hand. Same broken rim and entrance spill.",
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
       "export": {
         "format": "WebP",
         "quality": 86,
@@ -351,7 +347,14 @@
         "cropped": false,
         "upscaled": false,
         "aspect_preserved_with_integer_rounding": true
-      }
+      },
+      "previous_source_sha256": "e42fde536841f860c75a275dc52411a65aa9b33152d4cdbf892c4d61c3ff83d0",
+      "previous_source_dimensions": {
+        "width": 1670,
+        "height": 942
+      },
+      "previous_export_sha256": "31025f7fb11f8c8b0409e0e932d4f9ab51b28478449aec187e69553abbcb5dbe",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
     },
     {
       "key": "slide",
@@ -359,36 +362,32 @@
       "file": "assets/07_slide_mobile.webp",
       "width": 720,
       "height": 1279,
-      "bytes": 333026,
-      "sha256": "bbf718d4e9096ba53287cc33d78551d734f9c809c35668358916aa5b61ed8898",
+      "bytes": 70134,
+      "sha256": "77f1129b5d0fee1dd076a269a98c9c86530be7072a8e105633cdc17cfabe109e",
       "source_file": "07_slide_mobile.png",
       "source_role": "v7_fall_selected_native_png",
-      "source_sha256": "8aa7409f088a0f909b8d5d498ea5d549b4806196c964563164611b35472ab723",
+      "source_sha256": "bbde0ecdd4188708a356359f44febbf2bcc70af923ae69c165519ffafc1bb239",
       "source_dimensions": {
         "width": 941,
-        "height": 1671
+        "height": 1672
       },
-      "source_bytes": 3429447,
-      "generation_request_id": "07_slide_mobile_fix_canvas",
-      "selected_generation": "generated_images/exec-086ac010-8bbf-43a1-9c00-44753e78c318.png",
+      "source_bytes": 1652597,
+      "generation_request_id": "eye07_mobile",
+      "selected_generation": "generated_images/exec-b4da88c6-313c-482e-95ff-a140cc7f8d1c.png",
       "reference_roles": [
         {
-          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_mobile.png",
-          "role": "approved 9:16 portrait canvas reference",
-          "sha256": "f78dfd4fe55ad24d6ddee146cd143a194987efdb7b1e9d61c471704b546fcd21"
+          "file": "mine_intro_v7_fall_art_source/originals/07_slide_mobile.png",
+          "role": "edit target",
+          "sha256": "6d07e4541c86bc8ea72001f6a608fa9e5b423c9272ecc8ff6b355facfc796614",
+          "historical_source": "backups/v7_before_eye_fix/mine_game_intro_v7_fall_art_source.zip::originals/07_slide_mobile.png"
         },
         {
-          "file": "generated_images/exec-1f3cf557-420d-4959-8e94-4a546b93089a.png",
-          "role": "rejected wider slide draft pose/content reference",
-          "sha256": "00582754e6ea4a1a63e60c6457d0766fc81021c61099c17ef46e6af52c28ae8e"
-        },
-        {
-          "file": "mine_intro_v7_fall_art_source/originals/07_slide_desktop.png",
-          "role": "approved slide desktop event/landing reference",
-          "sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f"
+          "file": "generated_images/exec-6635937d-12dd-43c7-b354-52a08a3b8332.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "bc815e67bb558fc80a220d4142601f66b1c7b8782592eb2e7ec8744e0872dc89"
         }
       ],
-      "visual_review": "Selected true narrow 9:16 recomposition after rejecting a wider native draft. All figures, six shoes and owned props fit; released contact and left-palm bracing clear; short chute and nearby landing retained.",
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
       "export": {
         "format": "WebP",
         "quality": 86,
@@ -396,39 +395,46 @@
         "cropped": false,
         "upscaled": false,
         "aspect_preserved_with_integer_rounding": true
-      }
+      },
+      "previous_source_sha256": "6d07e4541c86bc8ea72001f6a608fa9e5b423c9272ecc8ff6b355facfc796614",
+      "previous_source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "previous_export_sha256": "bc1c63e57d8e77134b0d32bbdbba2f2a36bc72856b86505781f6ee962e9c1c17",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
     },
     {
       "key": "below",
       "orientation": "desktop",
       "file": "assets/08_below_desktop.webp",
       "width": 1280,
-      "height": 720,
-      "bytes": 219640,
-      "sha256": "820554f24600c979a8663ad25e9bbc4b19c13f6e0bf917c3bff24c0d2b1cfec6",
+      "height": 722,
+      "bytes": 21164,
+      "sha256": "45c0518fc7c3634ebc0c872d53a9dc454caabc6c50ffcffb16644331b21249da",
       "source_file": "08_below_desktop.png",
       "source_role": "v7_fall_selected_native_png",
-      "source_sha256": "5964d7d553405f99e22c9a3167361a17de3f53f8478368b419cdc808e03be653",
+      "source_sha256": "127a1ce33ea1db74072ec0b0674493e1356ff823ad38d4090067f54963e0f640",
       "source_dimensions": {
-        "width": 1672,
-        "height": 941
+        "width": 1670,
+        "height": 942
       },
-      "source_bytes": 2787620,
-      "generation_request_id": "08_below_desktop",
-      "selected_generation": "generated_images/exec-4d09aef4-a274-4223-afad-29ad3da4bd67.png",
+      "source_bytes": 895646,
+      "generation_request_id": "eye08_desktop_readable",
+      "selected_generation": "generated_images/exec-6aef2a03-1e84-4ff9-990c-e4a75ed92de0.png",
       "reference_roles": [
         {
-          "file": "mine_intro_v7_fall_art_source/originals/07_slide_desktop.png",
-          "role": "approved slide desktop landing/geography/props reference",
-          "sha256": "21b346d10ce553ff33056244374ac6e8ac1f394fb11984d5029b3980d8b3b22f"
+          "file": "/workspace/scratch/1ae913234b76/generated_images/exec-74fa84e7-c6e3-49ca-b181-047f35e36751.png",
+          "role": "edit target",
+          "sha256": "7fd2cba61d19da11e27b760308106caaf987894ac6ac2781554190f8b19b6322"
         },
         {
-          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
-          "role": "current repaired live character/shoulder reference",
-          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+          "file": "/workspace/scratch/1ae913234b76/tmp/v7_eye_qa/07_mobile_inspection.png",
+          "role": "corrected eye-detail reference only",
+          "sha256": "d2b2b404ad09821817ac20a81be3d3023d0d7f312aa21395a1c853419b6ad982"
         }
       ],
-      "visual_review": "Approved trio regrouped on dry gravel with retained right/left props and readable faces; same broken rim/chute high-left, natural uncarved rock arch over black water ahead-right, far end lost in darkness. No new lore/creature or light source.",
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
       "export": {
         "format": "WebP",
         "quality": 86,
@@ -436,7 +442,14 @@
         "cropped": false,
         "upscaled": false,
         "aspect_preserved_with_integer_rounding": true
-      }
+      },
+      "previous_source_sha256": "2f7b5d3f725b3cc9a323503bf51b641cdb07ecc319ac85452f763d4894eef5ed",
+      "previous_source_dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "previous_export_sha256": "a3d56c718d558d976736ea16c15a79b9997171f665645b2f3aa6243bfe428296",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
     },
     {
       "key": "below",
@@ -444,36 +457,38 @@
       "file": "assets/08_below_mobile.webp",
       "width": 720,
       "height": 1279,
-      "bytes": 266370,
-      "sha256": "0d78d498746d9b0aeb18fb7c91fbdf3aca7abace0d51797e2d40ef7b0eb0a168",
+      "bytes": 26344,
+      "sha256": "ceb7f93701bf50a8744313fc35b85ac152f81ee34bdd45a202d8df0d3fc0cbfd",
       "source_file": "08_below_mobile.png",
       "source_role": "v7_fall_selected_native_png",
-      "source_sha256": "871a7e922760846ffaf08c95d083698ea2f8cb745cf2f7dfc64077e76b05054c",
+      "source_sha256": "d9df69b0f228f05760103ba5281e75bc1bab1a67377ede9b10203ef12695bbf8",
       "source_dimensions": {
         "width": 941,
-        "height": 1672
+        "height": 1671
       },
-      "source_bytes": 3042629,
-      "generation_request_id": "08_below_mobile_fix_canvas",
-      "selected_generation": "generated_images/exec-d210d5ae-59a4-4833-acff-3278e24d263d.png",
+      "source_bytes": 706746,
+      "generation_request_id": "eye08_mobile",
+      "selected_generation": "generated_images/exec-406cc18c-d2c7-4e95-8dbd-0103defc6f55.png",
       "reference_roles": [
         {
-          "file": "mine_intro_v7_fall_art_source/originals/07_slide_mobile.png",
-          "role": "approved true 9:16 canvas reference",
-          "sha256": "8aa7409f088a0f909b8d5d498ea5d549b4806196c964563164611b35472ab723"
+          "file": "mine_intro_v7_fall_art_source/originals/08_below_mobile.png",
+          "role": "edit target",
+          "sha256": "43e6fd0c8de3c1e6e50680fa4a0afdf294299c906fd26e3d74ca2dac8abf8284",
+          "historical_source": "backups/v7_before_eye_fix/mine_game_intro_v7_fall_art_source.zip::originals/08_below_mobile.png"
         },
         {
-          "file": "generated_images/exec-051f8298-f5f1-4dcb-af7a-d5b64d5a8320.png",
-          "role": "rejected wider below draft content reference",
-          "sha256": "960a2ae562aa475f57b8c789de12809662f166f7b192d628a571db10e6edbc62"
+          "file": "tmp/v7_eye_qa/07_mobile_inspection.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "d2b2b404ad09821817ac20a81be3d3023d0d7f312aa21395a1c853419b6ad982",
+          "note": "Inspection-only magnified crop; no manual pixel painting of final artwork. Referenced solely to locate/refine eyes."
         },
         {
-          "file": "mine_intro_v7_fall_art_source/originals/08_below_desktop.png",
-          "role": "approved below desktop world/pose reference",
-          "sha256": "5964d7d553405f99e22c9a3167361a17de3f53f8478368b419cdc808e03be653"
+          "file": "generated_images/exec-74fa84e7-c6e3-49ca-b181-047f35e36751.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "7fd2cba61d19da11e27b760308106caaf987894ac6ac2781554190f8b19b6322"
         }
       ],
-      "visual_review": "Selected corrected true 9:16 recompose with complete trio on dry bank, retained correct hands/props, same opening/chute high-left and natural arch/water ahead-right. Far span remains dark and unexplained.",
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
       "export": {
         "format": "WebP",
         "quality": 86,
@@ -481,11 +496,18 @@
         "cropped": false,
         "upscaled": false,
         "aspect_preserved_with_integer_rounding": true
-      }
+      },
+      "previous_source_sha256": "43e6fd0c8de3c1e6e50680fa4a0afdf294299c906fd26e3d74ca2dac8abf8284",
+      "previous_source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "previous_export_sha256": "cab2a12a6e9b101f2d400ee109cc7c9a24a9bd11e70f3031a92e60d01cc35fcc",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
     }
   ],
   "original_image_bytes": 23310154,
-  "image_bytes": 4841212,
+  "image_bytes": 3888170,
   "export": {
     "quality": 86,
     "format": "WebP",
@@ -510,8 +532,8 @@
     "external_relative_assets": true,
     "missing_image_holds_clock": true
   },
-  "art_revision": "v7_fall_lite_selected_art",
-  "art_revision_scope": "Retain all eight repaired live/legend/cut/gap WebPs exactly; add eight selected warning/giveway/slide/below WebPs. Retire descent from runtime; selected native PNGs remain outside the lightweight root.",
+  "art_revision": "v7_fall_lite_dark_world_eye_fix",
+  "art_revision_scope": "Only tall phone holder eye regions in the four final dark-world desktop/mobile illustrations. Twelve earlier WebPs and complete player HTML unchanged.",
   "art_revision_history": [
     {
       "revision": "v6_lite_shoulder_fix",
@@ -520,15 +542,25 @@
     {
       "revision": "v6_lite_gap_arm_fix",
       "scope": "Only 04_gap desktop/mobile: correct tall teenager left magnet arm from far shoulder/sleeve instead of the back/bottom shirt hem. Phone remains in right hand. Eight other image payloads and index.html remain unchanged."
+    },
+    {
+      "revision": "v7_fall_lite_selected_art",
+      "scope": "Retain all eight repaired live/legend/cut/gap WebPs exactly; add eight selected warning/giveway/slide/below WebPs. Retire descent from runtime; selected native PNGs remain outside the lightweight root.",
+      "superseded_by": "v7_fall_lite_dark_world"
+    },
+    {
+      "revision": "v7_fall_lite_dark_world",
+      "scope": "Only final scene keys slide/below, desktop/mobile: airborne trio in near-total blackness and one tiny distant light. First twelve runtime WebPs unchanged; core player/timeline/cards unchanged.",
+      "superseded_by": "v7_fall_lite_dark_world_eye_fix"
     }
   ],
   "art_stage": {
     "revision": "v7_fall_lite",
-    "status": "selected_art_checked_and_integrated",
+    "status": "eye_corrected_exports_checked",
     "source_checkpoint": "mine_game_intro_v7_fall_art_checkpoint.zip",
     "source_checkpoint_sha256": "2aa27150eb734db51051a51bfd2018e5086679740513ff0e2c2a8d0ab2a83bc3",
     "selected_new_image_count": 8,
-    "selected_new_image_bytes": 2332388,
+    "selected_new_image_bytes": 1379346,
     "selected_native_originals": "../mine_intro_v7_fall_art_source/originals/",
     "active_art_order": [
       "live",
@@ -541,7 +573,8 @@
       "below"
     ],
     "art_review": "production/art_review.json",
-    "note": "Art review records the completed preceding art-only stage. Current player implementation status is recorded separately in verification.md and production/integration_report.json."
+    "note": "Art review records the completed preceding art-only stage. Current player implementation status is recorded separately in verification.md and production/integration_report.json.",
+    "current_art_revision": "v7_fall_lite_dark_world_eye_fix"
   },
   "beat_count": 16,
   "image_beat_count": 8,
@@ -572,7 +605,7 @@
     "cards": 8,
     "image_events": 8,
     "final_visual_verification": "exports_reviewed_native_player_access_blocked",
-    "final_packaging": "checked_separate_runtime_and_art_source_archives",
+    "final_packaging": "checked_eye_corrected_runtime_and_art_source_archives",
     "gameplay_implemented": false,
     "reports": [
       "file_checks.json",

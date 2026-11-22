@@ -55,6 +55,9 @@ def package_art_source(source, output):
              'production/generation_requests.json', 'production/selected_images.json',
              'production/export_selected.py']
     names += ['originals/' + a['file'] for a in native['files']]
+    for name in ('production/dark_world_revision.json', 'production/eye_fix_revision.json'):
+        if (source / name).is_file():
+            names.append(name)
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in sorted(names):
