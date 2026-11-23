@@ -1,17 +1,167 @@
 {
   "status": "passed",
-  "release": "v6_lite",
-  "scope": "production JS in a deterministic DOM; not native layout or RAM measurement",
-  "runtime_sha256": "1c34cdeed5904b8731bd731a54351ed30c6e6e8f8841e4493a2f1825796b73ae",
+  "release": "v8_bulb_separation_lite",
+  "total_ms": 84000,
+  "beat_count": 20,
+  "image_events": 10,
+  "frame_pairs": 12,
+  "scope": "production JS in a deterministic DOM; not native layout, decoding-speed or RAM measurement",
+  "runtime_sha256": "4c550f301394c6a90146f21a820ed18f6d34e231c0067c226ed7c49bad57bfdf",
   "audio_attempts": 0,
   "max_owned_images": 2,
+  "camera_probe_samples": [
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 390,
+        "height": 740
+      },
+      "local_ms": 600,
+      "orientation": "mobile",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 390,
+        "height": 740
+      },
+      "local_ms": 700,
+      "orientation": "mobile",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": -34.639583333333334
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 390,
+        "height": 740
+      },
+      "local_ms": 800,
+      "orientation": "mobile",
+      "frame": "drop_magnet",
+      "opacity": 0,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 390,
+        "height": 740
+      },
+      "local_ms": 920,
+      "orientation": "mobile",
+      "frame": "drop_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 900,
+        "height": 300
+      },
+      "local_ms": 600,
+      "orientation": "desktop",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 900,
+        "height": 300
+      },
+      "local_ms": 700,
+      "orientation": "desktop",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": -15
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 900,
+        "height": 300
+      },
+      "local_ms": 800,
+      "orientation": "desktop",
+      "frame": "drop_magnet",
+      "opacity": 0,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 900,
+        "height": 300
+      },
+      "local_ms": 920,
+      "orientation": "desktop",
+      "frame": "drop_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 1920,
+        "height": 900
+      },
+      "local_ms": 600,
+      "orientation": "desktop",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 1920,
+        "height": 900
+      },
+      "local_ms": 700,
+      "orientation": "desktop",
+      "frame": "approach_near_magnet",
+      "opacity": 1,
+      "drop_px": -45
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 1920,
+        "height": 900
+      },
+      "local_ms": 800,
+      "orientation": "desktop",
+      "frame": "drop_magnet",
+      "opacity": 0,
+      "drop_px": 0
+    },
+    {
+      "scope": "production JS style assignments in simulated stage; not native layout",
+      "stage_bounds": {
+        "width": 1920,
+        "height": 900
+      },
+      "local_ms": 920,
+      "orientation": "desktop",
+      "frame": "drop_magnet",
+      "opacity": 1,
+      "drop_px": 0
+    }
+  ],
   "cases": [
     {
-      "name": "Entry waits for just the first scene and does not eagerly allocate five images",
+      "name": "Entry waits for just the first scene and does not eagerly allocate all scene/frame images",
       "status": "passed"
     },
     {
-      "name": "All ten exclusive beats keep exact boundaries and the title holds at 40000ms",
+      "name": "All twenty exclusive beats keep exact boundaries and the title holds at 84000ms",
       "status": "passed"
     },
     {
@@ -68,6 +218,126 @@
     },
     {
       "name": "Fresh callback time handles stale RAF timestamps; start hook fires once per activation",
+      "status": "passed"
+    },
+    {
+      "name": "Portrait entry decodes only its first scene; timed and reading hints agree with v8",
+      "status": "passed"
+    },
+    {
+      "name": "Every new image uses its allocated fades and clears art before the following card/title",
+      "status": "passed"
+    },
+    {
+      "name": "All six new image loads hold their full duration and fade despite long wall-clock waits",
+      "status": "passed"
+    },
+    {
+      "name": "Playing and paused rotations in each new image preserve clock, zoom and old art while decoding",
+      "status": "passed"
+    },
+    {
+      "name": "Reading progress spans twenty beats; final image holds without loading or looping and Back remains usable",
+      "status": "passed"
+    },
+    {
+      "name": "A pending new-scene decode cannot resurrect art after Skip; stale callback timestamps cannot delay new cards",
+      "status": "passed"
+    },
+    {
+      "name": "Pause immediately before and during every new image preserves beat time through the full ending",
+      "status": "passed"
+    },
+    {
+      "name": "Background during new-scene orientation decoding requires Resume after replacement completes",
+      "status": "passed"
+    },
+    {
+      "name": "Every new timed image recovers from decode failure, including failure and retry while background-paused",
+      "status": "passed"
+    },
+    {
+      "name": "Rapid navigation through the complete reading sequence and resizing clears every discarded source",
+      "status": "passed"
+    },
+    {
+      "name": "Default profile supplies protagonist, companions and one camera operator to each start activation",
+      "status": "passed"
+    },
+    {
+      "name": "POV approach uses authored far/mid/near frames at exact internal boundaries, without repeated announcements or zoom",
+      "status": "passed"
+    },
+    {
+      "name": "Both missing internal approach frames hold at their own boundaries and background completion never auto-resumes",
+      "status": "passed"
+    },
+    {
+      "name": "A missing drop frame holds before the camera moves, then one upward projection ends on the lower view",
+      "status": "passed"
+    },
+    {
+      "name": "Rotation during an internal fade keeps old art and local progress while replacement and next frame decode",
+      "status": "passed"
+    },
+    {
+      "name": "Paused rotation during the drop retains camera/fade progress without restarting the event",
+      "status": "passed"
+    },
+    {
+      "name": "Reduced motion selects stable near/drop frames and never requests unused far/mid views",
+      "status": "passed"
+    },
+    {
+      "name": "Reading POV sequences finish once, hold for thirty seconds and reentry starts a fresh local instance",
+      "status": "passed"
+    },
+    {
+      "name": "Incomplete alternate fixed profiles and unfinished selectable builds fail clearly rather than use magnet art",
+      "status": "passed"
+    },
+    {
+      "name": "An in-flight internal-frame decode cannot overwrite Skip/Replay or resurrect its old instance",
+      "status": "passed"
+    },
+    {
+      "name": "Drop displacement uses contained image height in short landscape and preserves normalized progress on resize",
+      "status": "passed"
+    },
+    {
+      "name": "Changing reduced motion during an interrupted internal fade cancels the obsolete frame requirement",
+      "status": "passed"
+    },
+    {
+      "name": "An internal-frame decode error exposes retry and its obsolete failed source cannot reattach",
+      "status": "passed"
+    },
+    {
+      "name": "All three role profiles resolve their own hands, cast, phone and frame keys without activating unavailable artwork",
+      "status": "passed"
+    },
+    {
+      "name": "Role validation rejects duplicated phones, wrong prop hands, wrong companion casts and missing profile alts",
+      "status": "passed"
+    },
+    {
+      "name": "Flipping alternate enablement flags cannot bypass the missing-art guard",
+      "status": "passed"
+    },
+    {
+      "name": "Active profile supplies image alt text and announcements rather than hardcoded scout descriptions",
+      "status": "passed"
+    },
+    {
+      "name": "Every internal frame error holds its local boundary, retries without restarting and respects background Resume",
+      "status": "passed"
+    },
+    {
+      "name": "Reading drop plays once, holds beyond thirty seconds and Back/reentry gets a fresh frame instance",
+      "status": "passed"
+    },
+    {
+      "name": "Portrait, short-landscape and wide-desktop stage bounds retain single-clock camera progress",
       "status": "passed"
     },
     {
