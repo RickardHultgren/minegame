@@ -41,7 +41,7 @@
     .story strong { font-weight:400; color:#d9ac7b; white-space:nowrap; }
     .illustration { overflow:hidden; }
     .art-slot { width:100%; height:100%; overflow:hidden; }
-    .art-slot img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; transform:translateY(var(--drop,0px)) scale(var(--scale,1)); transform-origin:center; }
+    .art-slot img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; transform:scale(var(--scale,1)); transform-origin:center; }
     .controls { background:#0b0f15; border-top:1px solid #252c35; padding:0 max(12px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left)); z-index:3; }
     .progress-track { height:2px; background:#252d36; margin:0 0 9px; }
     .progress-fill { height:100%; width:0; background:var(--rust); }
@@ -78,7 +78,7 @@
         <div class="rule" aria-hidden="true"></div>
         <div class="entry-actions"><button class="primary" id="play" disabled>Play intro</button></div>
         <label class="read-option"><input type="checkbox" id="read-mode"> <span>Read at my pace</span></label>
-        <p class="hint" id="mode-hint">84 seconds · text and illustrated scenes</p>
+        <p class="hint" id="mode-hint">58 seconds · text and illustrated scenes</p>
         <p class="loading" id="load-status" role="status">Preparing artwork…</p>
       </div>
     </section>
@@ -92,32 +92,28 @@
     <section class="beat text-card" id="card-brave" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Nobody wanted to turn back first.</p></section>
     <figure class="beat illustration" id="scene-gap" data-kind="image" data-art-key="gap" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="gap"></div></figure>
     <section class="beat text-card" id="card-rolling" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">The camera kept rolling.</p></section>
-    <figure class="beat illustration" id="scene-walk" data-kind="image" data-art-key="walk" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="walk"></div></figure>
-    <section class="beat text-card" id="card-power" data-kind="text" data-duration="5000" hidden aria-hidden="true"><p class="story">“There’s power down here? Who turned that on?”</p></section>
-    <figure class="beat illustration" id="scene-handoff" data-kind="image" data-art-key="handoff" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="handoff"></div></figure>
-    <section class="beat text-card" id="card-first" data-kind="text" data-duration="4000" hidden aria-hidden="true"><p class="story">He went ahead. They kept filming.</p></section>
-    <figure class="beat illustration" id="scene-pov-approach" data-kind="image" data-art-key="pov-approach" data-duration="6000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="pov-approach"></div></figure>
-    <section class="beat text-card" id="card-closer" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Just a little closer.</p></section>
-    <figure class="beat illustration" id="scene-pov-fall" data-kind="image" data-art-key="pov-fall" data-duration="3000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="pov-fall"></div></figure>
-    <section class="beat text-card" id="card-trapped" data-kind="text" data-duration="4000" hidden aria-hidden="true"><p class="story">“The way back’s blocked!” “No signal!”</p></section>
-    <figure class="beat illustration" id="scene-separation" data-kind="image" data-art-key="separation" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="separation"></div></figure>
-    <section class="beat text-card" id="card-objective" data-kind="text" data-duration="4000" hidden aria-hidden="true"><p class="story">Find a way back to your friends.</p></section>
-    <figure class="beat illustration" id="scene-player" data-kind="image" data-art-key="player" data-duration="6000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="player"></div></figure>
+    <figure class="beat illustration" id="scene-warning" data-kind="image" data-art-key="warning" data-duration="4000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="warning"></div></figure>
+    <section class="beat text-card" id="card-floor" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Then the floor moved.</p></section>
+    <figure class="beat illustration" id="scene-giveway" data-kind="image" data-art-key="giveway" data-duration="3000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="giveway"></div></figure>
+    <section class="beat text-card" id="card-posing" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">Nobody was posing now.</p></section>
+    <figure class="beat illustration" id="scene-slide" data-kind="image" data-art-key="slide" data-duration="3000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="slide"></div></figure>
+    <section class="beat text-card" id="card-below" data-kind="text" data-duration="3000" hidden aria-hidden="true"><p class="story">They had no idea what lay below.</p></section>
+    <figure class="beat illustration" id="scene-below" data-kind="image" data-art-key="below" data-duration="5000" hidden aria-hidden="true" style="margin:0"><div class="art-slot" data-slot="below"></div></figure>
 
     <section class="screen" id="end" aria-labelledby="end-title" hidden>
       <div class="panel">
         <h2 class="end-title" id="end-title"><span>MINE</span><span>GAME</span></h2>
         <div class="rule" aria-hidden="true"></div>
-        <div class="end-actions"><button class="primary" id="enter">Continue</button><button id="replay">Replay intro</button></div>
+        <div class="end-actions"><button class="primary" id="enter">Enter the mine</button><button id="replay">Replay intro</button></div>
       </div>
     </section>
     <p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
   </section>
   <footer class="controls" aria-label="Playback controls">
-    <div class="progress-track" id="progress" role="progressbar" aria-label="Intro progress" aria-valuemin="0" aria-valuemax="84" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-track" id="progress" role="progressbar" aria-label="Intro progress" aria-valuemin="0" aria-valuemax="58" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="control-row">
       <p class="scene-status" id="scene-status" role="status" hidden></p>
-      <span class="time" id="time" aria-hidden="true">01:24</span>
+      <span class="time" id="time" aria-hidden="true">00:58</span>
       <div class="play-controls" id="play-controls" hidden><button id="pause">Pause</button><button id="skip">Skip intro</button></div>
     </div>
     <div class="reading-controls" id="reading-controls" hidden><button id="back">Back</button><button id="next">Next</button></div>
@@ -129,590 +125,45 @@
 <script id="art-data" type="application/json">
 {
   "live": {
-    "alt": "At the warning fence, the banana holder presents the mine to the tall friend's LIVE phone. The short friend poses beside his cutters; the doorway beyond is open.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 721
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1281
-      }
-    },
     "desktop": "assets/01_live_desktop.webp",
-    "mobile": "assets/01_live_mobile.webp"
+    "mobile": "assets/01_live_mobile.webp",
+    "alt": "At the warning fence, the banana holder presents the mine to the tall friend's LIVE phone. The short friend poses beside his cutters; the doorway beyond is open."
   },
   "legend": {
-    "alt": "An ochre illustration of the tale being told: an unfinished excavation leads toward a faint, imagined treasure chest, suggesting a hoped-for hoard rather than a confirmed discovery.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1282
-      }
-    },
     "desktop": "assets/02_legend_desktop.webp",
-    "mobile": "assets/02_legend_mobile.webp"
+    "mobile": "assets/02_legend_mobile.webp",
+    "alt": "An ochre illustration of the tale being told: an unfinished excavation leads toward a faint, imagined treasure chest, suggesting a hoped-for hoard rather than a confirmed discovery."
   },
   "cut": {
-    "alt": "With one hand on each cutter handle, the short teenager parts the fence wire. The tall friend films while holding his magnet; the banana holder poses for viewers.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1282
-      }
-    },
     "desktop": "assets/03_cut_desktop.webp",
-    "mobile": "assets/03_cut_mobile.webp"
+    "mobile": "assets/03_cut_mobile.webp",
+    "alt": "With one hand on each cutter handle, the short teenager parts the fence wire. The tall friend films while holding his magnet; the banana holder poses for viewers."
   },
   "gap": {
-    "alt": "The banana holder crouches beyond the gap. The tall friend ducks through with phone and magnet, while the short friend follows with closed cutters; their confidence is slipping.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 721
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1281
-      }
-    },
     "desktop": "assets/04_gap_desktop.webp",
-    "mobile": "assets/04_gap_mobile.webp"
+    "mobile": "assets/04_gap_mobile.webp",
+    "alt": "The banana holder crouches beyond the gap. The tall friend ducks through with phone and magnet, while the short friend follows with closed cutters; their confidence is slipping."
   },
-  "walk": {
-    "alt": "The three friends walk inside the mine and notice a small electric bulb hanging ahead. The tall teenager still carries the phone and magnet.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/05_walk_desktop.webp",
-    "mobile": "assets/05_walk_mobile.webp"
+  "warning": {
+    "desktop": "assets/05_warning_desktop.webp",
+    "mobile": "assets/05_warning_mobile.webp",
+    "alt": "The three friends crowd together for the phone. A board dips beneath the bandana teenager's heel as grit slips through the mine floor."
   },
-  "handoff_magnet": {
-    "alt": "The bandana teenager now holds the phone in his left hand and banana in his right. The tall friend steps ahead with his left-hand magnet as the other two stay behind.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 721
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/06_handoff_magnet_desktop.webp",
-    "mobile": "assets/06_handoff_magnet_mobile.webp"
+  "giveway": {
+    "desktop": "assets/06_giveway_desktop.webp",
+    "mobile": "assets/06_giveway_mobile.webp",
+    "alt": "The purple teenager reaches for his friend's free forearm as the small timber patch gives way beneath all three. The tall teenager still holds his phone and magnet."
   },
-  "approach_far_magnet": {
-    "alt": "Through the tall teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His left hand holds the magnet.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/07_approach_far_magnet_desktop.webp",
-    "mobile": "assets/07_approach_far_magnet_mobile.webp"
+  "slide": {
+    "desktop": "assets/07_slide_desktop.webp",
+    "mobile": "assets/07_slide_mobile.webp",
+    "alt": "All three friends fall through blackness, still holding their phone, magnet, banana and closed cutters."
   },
-  "approach_mid_magnet": {
-    "alt": "Through the tall teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His left hand holds the magnet.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/07_approach_mid_magnet_desktop.webp",
-    "mobile": "assets/07_approach_mid_magnet_mobile.webp"
-  },
-  "approach_near_magnet": {
-    "alt": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/07_approach_near_magnet_desktop.webp",
-    "mobile": "assets/07_approach_near_magnet_mobile.webp"
-  },
-  "drop_magnet": {
-    "alt": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/08_drop_magnet_desktop.webp",
-    "mobile": "assets/08_drop_magnet_mobile.webp"
-  },
-  "separation_magnet": {
-    "alt": "Looking back up, the scout sees his two friends at the broken edge. Rubble blocks the passage behind them; the bandana friend keeps the phone.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 721
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/09_separation_magnet_desktop.webp",
-    "mobile": "assets/09_separation_magnet_mobile.webp"
-  },
-  "player_magnet": {
-    "alt": "The scout stands alone on a dry lower landing, magnet in his left hand. An unexplored passage offers a possible route back to his friends above.",
-    "sizes": {
-      "desktop": {
-        "width": 1280,
-        "height": 720
-      },
-      "mobile": {
-        "width": 720,
-        "height": 1279
-      }
-    },
-    "desktop": "assets/10_player_magnet_desktop.webp",
-    "mobile": "assets/10_player_magnet_mobile.webp"
+  "below": {
+    "desktop": "assets/08_below_desktop.webp",
+    "mobile": "assets/08_below_mobile.webp",
+    "alt": "Seen from farther away, the three friends are still falling into an unknown dark world. Only one tiny distant light is visible ahead; no landing is revealed."
   }
-}
-</script>
-<script id="scene-data" type="application/json">
-{
-  "live": {
-    "initial": "live",
-    "alt": "At the warning fence, the banana holder presents the mine to the tall friend's LIVE phone. The short friend poses beside his cutters; the doorway beyond is open.",
-    "pov": false,
-    "transitions": []
-  },
-  "legend": {
-    "initial": "legend",
-    "alt": "An ochre illustration of the tale being told: an unfinished excavation leads toward a faint, imagined treasure chest, suggesting a hoped-for hoard rather than a confirmed discovery.",
-    "pov": false,
-    "transitions": []
-  },
-  "cut": {
-    "initial": "cut",
-    "alt": "With one hand on each cutter handle, the short teenager parts the fence wire. The tall friend films while holding his magnet; the banana holder poses for viewers.",
-    "pov": false,
-    "transitions": []
-  },
-  "gap": {
-    "initial": "gap",
-    "alt": "The banana holder crouches beyond the gap. The tall friend ducks through with phone and magnet, while the short friend follows with closed cutters; their confidence is slipping.",
-    "pov": false,
-    "transitions": []
-  },
-  "walk": {
-    "initial": "walk",
-    "alt": "The three friends walk inside the mine and notice a small electric bulb hanging ahead. The tall teenager still carries the phone and magnet.",
-    "pov": false,
-    "transitions": []
-  },
-  "handoff": {
-    "initial": "handoff_magnet",
-    "alt": "The bandana teenager now holds the phone in his left hand and banana in his right. The tall friend steps ahead with his left-hand magnet as the other two stay behind.",
-    "pov": false,
-    "transitions": []
-  },
-  "pov-approach": {
-    "initial": "approach_far_magnet",
-    "reduced": "approach_near_magnet",
-    "pov": true,
-    "alt": "Through the tall teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His left hand holds the magnet.",
-    "transitions": [
-      {
-        "at": 2000,
-        "out": 2000,
-        "swap": 2060,
-        "end": 2120,
-        "key": "approach_mid_magnet"
-      },
-      {
-        "at": 4000,
-        "out": 4000,
-        "swap": 4060,
-        "end": 4120,
-        "key": "approach_near_magnet"
-      }
-    ]
-  },
-  "pov-fall": {
-    "initial": "approach_near_magnet",
-    "reduced": "drop_magnet",
-    "pov": true,
-    "alt": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-    "drop": {
-      "start": 600,
-      "end": 800
-    },
-    "transitions": [
-      {
-        "at": 600,
-        "out": 720,
-        "swap": 800,
-        "end": 920,
-        "key": "drop_magnet"
-      }
-    ]
-  },
-  "separation": {
-    "initial": "separation_magnet",
-    "alt": "Looking back up, the scout sees his two friends at the broken edge. Rubble blocks the passage behind them; the bandana friend keeps the phone.",
-    "pov": true,
-    "transitions": []
-  },
-  "player": {
-    "initial": "player_magnet",
-    "alt": "The scout stands alone on a dry lower landing, magnet in his left hand. An unexplored passage offers a possible route back to his friends above.",
-    "pov": true,
-    "transitions": []
-  }
-}
-</script>
-<script id="character-data" type="application/json">
-{
-  "schema_version": 1,
-  "revision": "v8_bulb_separation_lite",
-  "stage": "verified_fixed_default_alternate_art_incomplete",
-  "runtime_fetch": false,
-  "integration": "Build-time configuration validated and inlined in index.html; never fetched at runtime.",
-  "mode": "fixed",
-  "fixed_profile_id": "magnet",
-  "selection_ui_enabled": false,
-  "runtime_implementation_status": "implemented_fixed_profile",
-  "selection_boundary": {
-    "after_beat_id": "card-power",
-    "before_beat_id": "scene-handoff",
-    "cinematic_ms": 44000,
-    "timed": false,
-    "fixed_mode": "Resolve magnet immediately without showing selection UI.",
-    "future_selection_mode": "Hold the cinematic clock and present only fully authored/verified profiles. Selection confirmation resumes at the same 44000 ms handoff boundary."
-  },
-  "enablement_policy": {
-    "missing_asset": "build/configuration_error",
-    "incomplete_profile": "must_not_be_enabled",
-    "fallback_to_magnet": false
-  },
-  "characters": {
-    "magnet": {
-      "age_treatment": "visibly teenage",
-      "silhouette": "tall thin, exaggerated tall dark hair",
-      "clothes": "pale oversized T-shirt, loose blue jeans, approved sneakers",
-      "persistent_prop": {
-        "item": "red horseshoe magnet with silver tips",
-        "hand": "left",
-        "key": "magnet"
-      },
-      "initial_phone_hand": "right"
-    },
-    "purple": {
-      "age_treatment": "visibly teenage",
-      "silhouette": "short broad, round",
-      "clothes": "purple sideways/backwards cap, sunglasses, oversized purple hoodie, olive baggy trousers, chunky sneakers",
-      "persistent_prop": {
-        "item": "closed bolt cutters after cutting",
-        "hand": "right",
-        "key": "closed_cutters"
-      },
-      "free_hand": "left"
-    },
-    "bandana": {
-      "age_treatment": "visibly teenage",
-      "silhouette": "slim agile, red bandana with tails",
-      "clothes": "yellow oversized top over pale sleeves, olive baggy trousers, approved sneakers",
-      "persistent_prop": {
-        "item": "partly peeled banana",
-        "hand": "right",
-        "key": "banana"
-      },
-      "free_hand_before_handoff": "left",
-      "gum": "deflated while speaking and during danger"
-    }
-  },
-  "profiles": [
-    {
-      "id": "magnet",
-      "canonical_name": null,
-      "default_target_profile": true,
-      "enabled_in_current_runtime": true,
-      "art_complete": true,
-      "asset_status": "selected_checked",
-      "protagonist_id": "magnet",
-      "companion_ids": [
-        "purple",
-        "bandana"
-      ],
-      "camera_operator_id": "bandana",
-      "phone_after_assignment": {
-        "owner": "bandana",
-        "hand": "left",
-        "count": 1
-      },
-      "protagonist_hands_after_assignment": {
-        "left": "magnet",
-        "right": "empty"
-      },
-      "all_character_hands_after_assignment": {
-        "magnet": {
-          "left": "magnet",
-          "right": "empty"
-        },
-        "purple": {
-          "left": "empty",
-          "right": "closed_cutters"
-        },
-        "bandana": {
-          "left": "phone",
-          "right": "banana"
-        }
-      },
-      "dialogue_roles": {
-        "power_question": "bandana",
-        "scout_agreement": "magnet",
-        "blocked_way": "purple",
-        "no_signal": "bandana"
-      },
-      "handoff_policy": "Tall RIGHT phone \u2192 bandana LEFT, completed before scouting.",
-      "viewpoint_height": {
-        "reference": "tall teen natural eye height",
-        "world_projection_review_required": true,
-        "numeric_height_m": null,
-        "do_not_fake_with_whole_image_scale": true
-      },
-      "branch_assets": {
-        "handoff_frame": "handoff_magnet",
-        "approach_frames": [
-          "approach_far_magnet",
-          "approach_mid_magnet",
-          "approach_near_magnet"
-        ],
-        "drop_frame": "drop_magnet",
-        "separation_frame": "separation_magnet",
-        "player_frame": "player_magnet",
-        "pov_hand_source": "pov_magnet_left_hand.png"
-      },
-      "requirements_before_enablement": [
-        "All branch frames exist in both orientations with selected hashes.",
-        "POV hand side/prop, eye height and companion cast are visually checked.",
-        "Phone ownership/camera operator and agreement staging match this branch.",
-        "All selected profile frames are flattened and present in the delivery; no silent fallback to another character."
-      ],
-      "event_alts": {
-        "handoff": "The bandana teenager now holds the phone in his left hand and banana in his right. The tall friend steps ahead with his left-hand magnet as the other two stay behind.",
-        "pov-approach": "Through the tall teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His left hand holds the magnet.",
-        "pov-fall": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-        "separation": "Looking back up, the scout sees his two friends at the broken edge. Rubble blocks the passage behind them; the bandana friend keeps the phone.",
-        "player": "The scout stands alone on a dry lower landing, magnet in his left hand. An unexplored passage offers a possible route back to his friends above."
-      }
-    },
-    {
-      "id": "purple",
-      "canonical_name": null,
-      "default_target_profile": false,
-      "enabled_in_current_runtime": false,
-      "art_complete": false,
-      "asset_status": "future_branch_not_supplied",
-      "protagonist_id": "purple",
-      "companion_ids": [
-        "magnet",
-        "bandana"
-      ],
-      "camera_operator_id": "magnet",
-      "phone_after_assignment": {
-        "owner": "magnet",
-        "hand": "right",
-        "count": 1
-      },
-      "protagonist_hands_after_assignment": {
-        "left": "empty",
-        "right": "closed_cutters"
-      },
-      "all_character_hands_after_assignment": {
-        "magnet": {
-          "left": "magnet",
-          "right": "phone"
-        },
-        "purple": {
-          "left": "empty",
-          "right": "closed_cutters"
-        },
-        "bandana": {
-          "left": "empty",
-          "right": "banana"
-        }
-      },
-      "dialogue_roles": {
-        "power_question": "bandana",
-        "scout_agreement": "purple",
-        "blocked_way": "bandana",
-        "no_signal": "magnet"
-      },
-      "handoff_policy": "Tall retains RIGHT phone; no phone transfer; branch-specific agreement art still required.",
-      "viewpoint_height": {
-        "reference": "short broad teen eye height",
-        "world_projection_review_required": true,
-        "numeric_height_m": null,
-        "do_not_fake_with_whole_image_scale": true
-      },
-      "branch_assets": {
-        "handoff_frame": "handoff_purple",
-        "approach_frames": [
-          "approach_far_purple",
-          "approach_mid_purple",
-          "approach_near_purple"
-        ],
-        "drop_frame": "drop_purple",
-        "separation_frame": "separation_purple",
-        "player_frame": "player_purple",
-        "pov_hand_source": "pov_purple_right_hand.png"
-      },
-      "requirements_before_enablement": [
-        "All branch frames exist in both orientations with selected hashes.",
-        "POV hand side/prop, eye height and companion cast are visually checked.",
-        "Phone ownership/camera operator and agreement staging match this branch.",
-        "All selected profile frames are flattened and present in the delivery; no silent fallback to another character."
-      ],
-      "event_alts": {
-        "handoff": "The short purple teenager agrees to scout ahead with his closed cutters. The tall friend keeps the phone in his right hand and magnet in his left; the bandana friend stays beside him.",
-        "pov-approach": "Through the short teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His right hand holds the closed cutters.",
-        "pov-fall": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-        "separation": "Looking back up, the scout sees the tall friend and the bandana friend at the broken edge. Rubble blocks the passage behind them; the tall friend keeps the phone.",
-        "player": "The short teenager stands alone on a dry lower landing, closed cutters in his right hand. An unexplored passage offers a possible route back to his friends above."
-      }
-    },
-    {
-      "id": "bandana",
-      "canonical_name": null,
-      "default_target_profile": false,
-      "enabled_in_current_runtime": false,
-      "art_complete": false,
-      "asset_status": "future_branch_not_supplied",
-      "protagonist_id": "bandana",
-      "companion_ids": [
-        "magnet",
-        "purple"
-      ],
-      "camera_operator_id": "magnet",
-      "phone_after_assignment": {
-        "owner": "magnet",
-        "hand": "right",
-        "count": 1
-      },
-      "protagonist_hands_after_assignment": {
-        "left": "empty",
-        "right": "banana"
-      },
-      "all_character_hands_after_assignment": {
-        "magnet": {
-          "left": "magnet",
-          "right": "phone"
-        },
-        "purple": {
-          "left": "empty",
-          "right": "closed_cutters"
-        },
-        "bandana": {
-          "left": "empty",
-          "right": "banana"
-        }
-      },
-      "dialogue_roles": {
-        "power_question": "bandana",
-        "scout_agreement": "bandana",
-        "blocked_way": "purple",
-        "no_signal": "magnet"
-      },
-      "handoff_policy": "Tall retains RIGHT phone; no phone transfer; branch-specific agreement art still required.",
-      "viewpoint_height": {
-        "reference": "slim bandana teen eye height",
-        "world_projection_review_required": true,
-        "numeric_height_m": null,
-        "do_not_fake_with_whole_image_scale": true
-      },
-      "branch_assets": {
-        "handoff_frame": "handoff_bandana",
-        "approach_frames": [
-          "approach_far_bandana",
-          "approach_mid_bandana",
-          "approach_near_bandana"
-        ],
-        "drop_frame": "drop_bandana",
-        "separation_frame": "separation_bandana",
-        "player_frame": "player_bandana",
-        "pov_hand_source": "pov_bandana_right_hand.png"
-      },
-      "requirements_before_enablement": [
-        "All branch frames exist in both orientations with selected hashes.",
-        "POV hand side/prop, eye height and companion cast are visually checked.",
-        "Phone ownership/camera operator and agreement staging match this branch.",
-        "All selected profile frames are flattened and present in the delivery; no silent fallback to another character."
-      ],
-      "event_alts": {
-        "handoff": "The bandana teenager agrees to scout ahead with the banana in his right hand. The tall friend keeps the phone in his right hand and magnet in his left; the purple friend stays beside him.",
-        "pov-approach": "Through the bandana teenager's eyes, a fixed hanging bulb grows closer along the tunnel. His right hand holds the banana.",
-        "pov-fall": "The floor breaks beneath the scout. His viewpoint drops toward a nearby lower level, leaving the fixed bulb high above him.",
-        "separation": "Looking back up, the scout sees the tall friend and the purple friend at the broken edge. Rubble blocks the passage behind them; the tall friend keeps the phone.",
-        "player": "The bandana teenager stands alone on a dry lower landing, banana in his right hand. An unexplored passage offers a possible route back to his friends above."
-      }
-    }
-  ],
-  "handoff_event": {
-    "name": "minegame:start",
-    "per_activation_count": 1,
-    "standalone_end_screen_stays_visible": true,
-    "preserve_fields": [
-      "source",
-      "mode"
-    ],
-    "default_detail": {
-      "source": "mine-game-intro",
-      "mode": "timed_or_reading_at_runtime",
-      "protagonistId": "magnet",
-      "companionIds": [
-        "purple",
-        "bandana"
-      ],
-      "cameraOperatorId": "bandana",
-      "perspective": "first-person",
-      "entryPoint": "after-separation"
-    },
-    "gameplay_included": false
-  },
-  "profile_validation": "Role/prop/accessible-description resolution is separate from art eligibility. Only the fully authored fixed default may activate."
 }
 </script>
 <script>
@@ -721,279 +172,243 @@
   const $ = id => document.getElementById(id);
   const ui = Object.fromEntries(['app','stage','entry','end','play','read-mode','mode-hint','load-status','scene-status','time','play-controls','reading-controls','pause','skip','back','next','enter','replay','announcement','progress','progress-fill'].map(id => [id,$(id)]));
   const art = JSON.parse($('art-data').textContent);
-  const scenes = JSON.parse($('scene-data').textContent);
-  const config = JSON.parse($('character-data').textContent);
-  function roleProfile(data,id) {
-    const profile=data.profiles.find(p=>p.id===id);
-    if(!profile || profile.protagonist_id!==id)throw Error('Unknown protagonist role profile.');
-    const roster=[id,...profile.companion_ids],characters=Object.keys(data.characters);
-    if(roster.length!==characters.length || new Set(roster).size!==characters.length || roster.some(c=>!data.characters[c]))throw Error('Invalid companion roster.');
-    if(!profile.companion_ids.includes(profile.camera_operator_id))throw Error('The camera operator must remain with the companions.');
-    const ledger=profile.all_character_hands_after_assignment;
-    let phones=0;
-    for(const characterId of characters){
-      const hands=ledger[characterId],prop=data.characters[characterId].persistent_prop;
-      if(!hands || Object.keys(hands).length!==2 || !('left' in hands) || !('right' in hands))throw Error('Invalid hand ledger.');
-      if(hands[prop.hand]!==prop.key)throw Error('Persistent prop changed owner or hand.');
-      phones+=Object.values(hands).filter(item=>item==='phone').length;
-    }
-    const phone=profile.phone_after_assignment;
-    if(phones!==1 || phone.owner!==profile.camera_operator_id || ledger[phone.owner]?.[phone.hand]!=='phone')throw Error('Invalid single-phone ownership.');
-    for(const key of ['handoff','pov-approach','pov-fall','separation','player'])if(!profile.event_alts?.[key]?.trim())throw Error('Missing profile-specific accessible description.');
-    return profile;
-  }
-  function resolveProfile(data) {
-    if(data.mode!=='fixed' || data.selection_ui_enabled)throw Error('A selectable build requires complete branch art and a selection interface.');
-    const profile=roleProfile(data,data.fixed_profile_id);
-    if(!profile || !profile.art_complete || !profile.enabled_in_current_runtime)throw Error('The selected protagonist profile is incomplete.');
-    const bundle=profile.branch_assets;
-    for(const key of [bundle.handoff_frame,...bundle.approach_frames,bundle.drop_frame,bundle.separation_frame,bundle.player_frame]) {
-      if(!art[key]?.desktop || !art[key]?.mobile)throw Error('The selected profile has missing artwork.');
-    }
-    return profile;
-  }
-  const profile = resolveProfile(config);
-  for(const key of ['handoff','pov-approach','pov-fall','separation','player'])scenes[key].alt=profile.event_alts[key];
-  // Roles, accessible descriptions and branch frames are data, independent of beat indexes.
-  const bundle=profile.branch_assets;
-  scenes.handoff.initial=bundle.handoff_frame;
-  scenes['pov-approach'].initial=bundle.approach_frames[0];
-  scenes['pov-approach'].transitions.forEach((t,i)=>{t.key=bundle.approach_frames[i+1];});
-  scenes['pov-approach'].reduced=bundle.approach_frames[2];
-  scenes['pov-fall'].initial=bundle.approach_frames[2];
-  scenes['pov-fall'].transitions[0].key=bundle.drop_frame;
-  scenes['pov-fall'].reduced=bundle.drop_frame;
-  scenes.separation.initial=bundle.separation_frame;
-  scenes.player.initial=bundle.player_frame;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   let startAt = 0;
   const beats = [...document.querySelectorAll('.beat')].map((el,index) => {
-    const beat={el,index,id:el.id,kind:el.dataset.kind,start:startAt,duration:Number(el.dataset.duration)};
-    startAt+=beat.duration;return beat;
+    const beat = {el,index,id:el.id,kind:el.dataset.kind,start:startAt,duration:Number(el.dataset.duration)};
+    startAt += beat.duration;
+    return beat;
   });
-  const TOTAL=startAt, TOTAL_SECONDS=TOTAL/1000;
-  const formatTime=ms=>{const seconds=Math.ceil(ms/1000);return String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');};
-  const state={phase:'entry',mode:'timed',step:0,previousPhase:'playing',ready:false,failed:false,active:-1};
-  const clock={base:0,origin:0};
-  // Explicit source ownership is bounded to TWO. Native caches/GPU copies are not measured.
-  const images=new Map();
-  let shown=null, shownBeat=null, progressSecond=-1, serial=0;
-  let instance={id:null,serial:0,lastLocal:0,satisfied:new Set()};
-  const running=()=>state.phase==='playing'||state.phase==='reading';
-  const inSequence=()=>running()||state.phase==='paused'||state.phase==='buffering';
-  const elapsed=(now=performance.now())=>clock.base+(running()?now-clock.origin:0);
-  const text=(element,value)=>{if(element.textContent!==value)element.textContent=value;};
-  const hidden=(element,value)=>{if(element.hidden!==value)element.hidden=value;};
-  const attribute=(element,name,value)=>{if(element.getAttribute(name)!==value)element.setAttribute(name,value);};
-  function freeze(now=performance.now()){if(running())clock.base=elapsed(now);}
-  function resetClock(value=0){clock.base=value;clock.origin=performance.now();}
-  function announce(value){text(ui.announcement,value);}
-  function preferredArt(){const r=ui.stage.getBoundingClientRect();return r.width<r.height?'mobile':'desktop';}
-  function imageId(key,mode){return mode+':'+key;}
-  function nextImage(beat){return beats.find(b=>b.kind==='image'&&(!beat||b.index>beat.index));}
-  function scene(beat){return scenes[beat.el.dataset.artKey];}
-  function localTime(beat,now){return Math.max(0,state.mode==='reading'?elapsed(now):elapsed(now)-beat.start);}
-  function view(beat,local){
-    const data=scene(beat);
-    if(motion.matches)return {key:data.reduced||data.initial,next:null,transition:null};
-    let key=data.initial;
-    for(const transition of data.transitions||[])if(local>=transition.swap)key=transition.key;
-    const next=(data.transitions||[]).find(t=>local<t.swap);
-    const transition=(data.transitions||[]).find(t=>local>=t.at&&local<t.end);
-    return {key,next,transition};
-  }
-  function readyKey(key){return [...images.values()].some(e=>e.key===key&&e.status==='ready'&&!e.disposed);}
-  function clearSlots(except=null){
-    for(const key of Object.keys(scenes)){
+  const TOTAL = startAt;
+  const TOTAL_SECONDS = TOTAL/1000;
+  const formatTime = ms => '00:'+String(Math.ceil(ms/1000)).padStart(2,'0');
+  const state = {phase:'entry',mode:'timed',step:0,previousPhase:'playing',ready:false,failed:false,active:-1};
+  const clock = {base:0,origin:0};
+  // At most two images have owned sources: current + next, or current + replacement.
+  // Browser HTTP/decoded/GPU caches are outside this explicit ownership bound.
+  const images = new Map();
+  let shown = null, progressSecond = -1;
+  const running = () => state.phase==='playing' || state.phase==='reading';
+  const inSequence = () => running() || state.phase==='paused' || state.phase==='buffering';
+  const elapsed = (now=performance.now()) => clock.base + (running() ? now-clock.origin : 0);
+  const text = (element,value) => { if(element.textContent!==value)element.textContent=value; };
+  const hidden = (element,value) => { if(element.hidden!==value)element.hidden=value; };
+  const attribute = (element,name,value) => { if(element.getAttribute(name)!==value)element.setAttribute(name,value); };
+  function freeze(now=performance.now()) { if(running())clock.base=elapsed(now); }
+  function resetClock(value=0) { clock.base=value; clock.origin=performance.now(); }
+  function announce(value) { text(ui.announcement,value); }
+  function preferredArt() { const r=ui.stage.getBoundingClientRect(); return r.width<r.height?'mobile':'desktop'; }
+  function imageId(key,mode) { return mode+':'+key; }
+  function nextImage(beat) { return beats.find(b=>b.kind==='image' && (!beat || b.index>beat.index)); }
+  function clearSlots(except=null) {
+    for(const key of Object.keys(art)) {
       const slot=document.querySelector('[data-slot="'+key+'"]');
-      if(slot.children.length&&slot.children[0]!==except)slot.replaceChildren();
+      if(slot.children.length && slot.children[0]!==except)slot.replaceChildren();
     }
   }
-  function release(entry){
+  function release(entry) {
     entry.disposed=true;
-    if(shown===entry){clearSlots();shown=null;shownBeat=null;}
-    entry.img.onload=null;entry.img.onerror=null;entry.img.removeAttribute('src');images.delete(entry.id);
+    if(shown===entry) { clearSlots(); shown=null; }
+    entry.img.onload=null; entry.img.onerror=null;
+    entry.img.removeAttribute('src');
+    images.delete(entry.id);
   }
-  function load(key,mode){
+  function load(key,mode) {
     const id=imageId(key,mode);
     if(images.has(id))return images.get(id);
     if(images.size>=2)return null;
-    const img=new Image();const entry={id,key,mode,img,status:'loading',disposed:false};images.set(id,entry);
-    img.alt=art[key].alt;img.decoding='async';img.draggable=false;
+    const img=new Image();
+    const entry={id,key,mode,img,status:'loading',disposed:false};
+    images.set(id,entry);
+    img.alt=art[key].alt; img.decoding='async'; img.draggable=false;
     img.onload=async()=>{
-      try{if(img.decode)await img.decode();if(entry.disposed)return;entry.status='ready';render();}
-      catch(_){if(entry.disposed)return;entry.status='error';render();}
+      try {
+        if(img.decode)await img.decode();
+        if(entry.disposed)return;
+        entry.status='ready'; render();
+      } catch(_) {
+        if(entry.disposed)return;
+        entry.status='error'; render();
+      }
     };
-    img.onerror=()=>{if(entry.disposed)return;entry.status='error';render();};
-    img.src=art[key][mode];return entry;
+    img.onerror=()=>{
+      if(entry.disposed)return;
+      entry.status='error'; render();
+    };
+    img.src=art[key][mode];
+    return entry;
   }
-  function syncArt(beat,local=0,pending=null){
-    if(state.phase==='end'){
+  function syncArt(beat) {
+    if(state.phase==='end') {
       for(const entry of [...images.values()])release(entry);
-      clearSlots();state.ready=false;state.failed=false;ui.app.removeAttribute('data-frame');return {available:true};
+      clearSlots(); state.ready=false; state.failed=false;
+      return true;
     }
     const mode=preferredArt();
-    const target=state.phase==='entry'?nextImage(null):(beat.kind==='image'?beat:nextImage(beat));
-    const imageBeat=beat?.kind==='image'&&state.phase!=='entry';
-    const targetView=target?view(target,imageBeat?local:0):null;
-    const key=targetView?.key,id=key?imageId(key,mode):null;
+    const target=state.phase==='entry'?beats[1]:(beat.kind==='image'?beat:nextImage(beat));
+    const key=target?.el.dataset.artKey;
+    const id=key?imageId(key,mode):null;
     const exact=images.get(id);
-    const fallback=imageBeat&&shownBeat===beat.id&&shown?.status==='ready'&&!shown.disposed?shown:null;
+    const fallback=beat?.kind==='image' && shown?.key===key && shown.status==='ready'?shown:null;
     const keep=new Set(id?[id]:[]);
-    if(fallback&&exact?.status!=='ready')keep.add(fallback.id);
-    else if(imageBeat&&exact?.status==='ready'){
-      let upcoming=pending?.key||targetView.next?.key;
-      if(!upcoming){const next=nextImage(beat);if(next)upcoming=view(next,0).key;}
-      if(upcoming&&upcoming!==key)keep.add(imageId(upcoming,mode));
+    // Rotation keeps the old art while its replacement decodes, occupying the spare slot.
+    if(fallback && exact?.status!=='ready')keep.add(fallback.id);
+    else if(beat?.kind==='image' && exact?.status==='ready') {
+      const upcoming=nextImage(beat);
+      if(upcoming)keep.add(imageId(upcoming.el.dataset.artKey,mode));
     }
     for(const entry of [...images.values()])if(!keep.has(entry.id))release(entry);
-    for(const wanted of keep){const [wantMode,wantKey]=wanted.split(':');load(wantKey,wantMode);}
-    const current=images.get(id),visible=current?.status==='ready'?current:fallback;
-    if(imageBeat&&visible&&!visible.disposed){
-      if(shown!==visible||shownBeat!==beat.id){
-        clearSlots(visible.img);document.querySelector('[data-slot="'+beat.el.dataset.artKey+'"]').replaceChildren(visible.img);
-        shown=visible;shownBeat=beat.id;
+    for(const wanted of keep) {
+      const [wantMode,wantKey]=wanted.split(':'); load(wantKey,wantMode);
+    }
+    const current=images.get(id);
+    const visible=current?.status==='ready'?current:fallback;
+    if(beat?.kind==='image' && visible && !visible.disposed) {
+      if(shown!==visible) {
+        clearSlots(visible.img);
+        document.querySelector('[data-slot="'+key+'"]').replaceChildren(visible.img);
+        shown=visible;
       }
-      visible.img.alt=scene(beat).alt;ui.app.dataset.art=visible.mode;ui.app.dataset.frame=visible.key;
-    }else{clearSlots();shown=null;shownBeat=null;ui.app.removeAttribute('data-frame');}
+      ui.app.dataset.art=visible.mode;
+    } else { clearSlots(); shown=null; }
     state.ready=current?.status==='ready';
-    const pendingEntry=pending?images.get(imageId(pending.key,mode)):null;
-    state.failed=(current?.status==='error'&&!visible)||(pendingEntry?.status==='error');
-    if(state.phase==='entry'){
-      ui.play.disabled=!state.ready&&!state.failed;text(ui.play,state.failed?'Try again':'Play intro');
+    state.failed=current?.status==='error' && !visible;
+    if(state.phase==='entry') {
+      ui.play.disabled=!state.ready && !state.failed;
+      text(ui.play,state.failed?'Try again':'Play intro');
       text(ui['load-status'],state.failed?'Artwork could not be loaded. Keep the assets folder beside index.html.':state.ready?'Ready when you are.':'Preparing first scene…');
     }
-    return {available:!imageBeat||!!(visible&&visible.key===key&&!visible.disposed)};
+    return beat?.kind!=='image' || !!(visible && !visible.disposed);
   }
-  function retryArt(){for(const entry of [...images.values()])if(entry.status==='error')release(entry);state.failed=false;render();}
-  function hideBeats(){for(const b of beats){b.el.hidden=true;b.el.setAttribute('aria-hidden','true');}state.active=-1;ui.app.removeAttribute('data-beat');}
-  function activeBeat(time){return state.mode==='reading'?beats[state.step]:beats.find(b=>time<b.start+b.duration)||beats[beats.length-1];}
-  function holdAt(beat,local){
-    clock.base=state.mode==='reading'?local:beat.start+local;
-    if(running()){state.previousPhase=state.phase;state.phase='buffering';}
+  function retryArt() {
+    for(const entry of [...images.values()])if(entry.status==='error')release(entry);
+    state.failed=false; render();
   }
-  function render(now=performance.now()){
+  function hideBeats() {
+    for(const b of beats) { b.el.hidden=true; b.el.setAttribute('aria-hidden','true'); }
+    state.active=-1; ui.app.removeAttribute('data-beat');
+  }
+  function activeBeat(time) {
+    return state.mode==='reading'?beats[state.step]:beats.find(b=>time<b.start+b.duration)||beats[beats.length-1];
+  }
+  function render(now=performance.now()) {
     let beat=inSequence()?activeBeat(elapsed(now)):null;
-    if(beat&&instance.id!==beat.id){instance={id:beat.id,serial:++serial,lastLocal:0,satisfied:new Set()};}
-    let local=beat?localTime(beat,now):0,pending=null;
-    if(instance.blocked&&instance.blocked.forMotion!==motion.matches)instance.blocked=null;
-    if(beat?.kind==='image'&&instance.blocked){
-      const required=images.get(imageId(instance.blocked.key,preferredArt()));
-      if(required?.status==='ready')instance.blocked=null;
-      else{pending=instance.blocked;local=instance.blocked.local;holdAt(beat,local);}
+    const available=syncArt(beat);
+    if(inSequence() && beat.kind==='image' && !available && running()) {
+      state.previousPhase=state.phase;
+      // Loading does not consume a beat or its fade. Wall time may exceed the logical duration.
+      clock.base=state.mode==='reading'?0:beat.start;
+      state.phase='buffering';
+    } else if(state.phase==='buffering' && available && !document.hidden) {
+      state.phase=state.previousPhase; clock.origin=now;
     }
-    if(beat?.kind==='image'&&!motion.matches&&!pending){
-      for(const transition of scene(beat).transitions||[]){
-        if(local<transition.at)break;
-        if(instance.satisfied.has(transition.at))continue;
-        if(readyKey(transition.key)){instance.satisfied.add(transition.at);continue;}
-        pending=transition;local=Math.max(transition.at,instance.lastLocal);holdAt(beat,local);break;
-      }
-    }
-    let status=syncArt(beat,local,pending);
-    if(inSequence()&&beat.kind==='image'&&!status.available){
-      const safe=instance.lastLocal||0;
-      // Preserve the last rendered local progress. Never rewind an entire POV event.
-      instance.blocked={key:view(beat,local).key,local:Math.min(local,safe),forMotion:motion.matches};
-      pending=instance.blocked;local=instance.blocked.local;holdAt(beat,local);status=syncArt(beat,local,pending);
-    }
-    if(state.phase==='buffering'&&status.available&&!pending&&!document.hidden){state.phase=state.previousPhase;clock.origin=now;}
     if(ui.app.dataset.state!==state.phase)ui.app.dataset.state=state.phase;
     if(ui.app.dataset.mode!==state.mode)ui.app.dataset.mode=state.mode;
-    ui.app.dataset.protagonist=profile.protagonist_id;
-    const sequence=inSequence();hidden(ui.entry,state.phase!=='entry');hidden(ui.end,state.phase!=='end');
-    hidden(ui['play-controls'],!sequence);hidden(ui['reading-controls'],!(sequence&&state.mode==='reading'));
-    const retry=state.failed&&sequence;
+    const sequence=inSequence();
+    hidden(ui.entry,state.phase!=='entry'); hidden(ui.end,state.phase!=='end');
+    hidden(ui['play-controls'],!sequence);
+    hidden(ui['reading-controls'],!(sequence && state.mode==='reading'));
+    const retry=state.failed && sequence;
     text(ui.pause,retry?'Try again':state.phase==='paused'?'Resume':'Pause');
     attribute(ui.pause,'aria-label',retry?'Retry artwork':state.phase==='paused'?'Resume intro':'Pause intro');
-    const waiting=sequence&&(state.phase==='buffering'||retry);hidden(ui['scene-status'],!waiting);
+    const waiting=sequence && (state.phase==='buffering' || retry);
+    hidden(ui['scene-status'],!waiting);
     text(ui['scene-status'],retry?'Artwork could not be loaded. Try again.':waiting?'Loading scene…':'');
-    if(!sequence){
-      hideBeats();hidden(ui.time,false);text(ui.time,formatTime(TOTAL));
+    if(!sequence) {
+      hideBeats(); hidden(ui.time,false); text(ui.time,formatTime(TOTAL));
       ui['progress-fill'].style.width=state.phase==='end'?'100%':'0%';
-      attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS));attribute(ui.progress,'aria-valuenow',state.phase==='end'?String(TOTAL_SECONDS):'0');return;
+      attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS));
+      attribute(ui.progress,'aria-valuenow',state.phase==='end'?String(TOTAL_SECONDS):'0');
+      return;
     }
-    const time=elapsed(now);beat=activeBeat(time);local=localTime(beat,now);
-    if(state.active!==beat.index){
-      for(const b of beats){const active=b===beat;b.el.hidden=!active;b.el.setAttribute('aria-hidden',String(!active));}
-      state.active=beat.index;ui.app.dataset.beat=beat.id;
-      announce(beat.kind==='text'?beat.el.textContent.trim():scene(beat).alt);
+    const time=elapsed(now);
+    beat=activeBeat(time);
+    const local=state.mode==='reading'?time:time-beat.start;
+    if(state.active!==beat.index) {
+      for(const b of beats) { const active=b===beat; b.el.hidden=!active; b.el.setAttribute('aria-hidden',String(!active)); }
+      state.active=beat.index; ui.app.dataset.beat=beat.id;
+      announce(beat.kind==='text'?beat.el.textContent.trim():art[beat.el.dataset.artKey].alt);
     }
     const fade=motion.matches?0:250;
     const fadeIn=fade?Math.min(1,Math.max(0,local)/fade):1;
     const fadeOut=state.mode==='reading'||!fade?1:Math.min(1,Math.max(0,beat.duration-local)/fade);
-    let opacity=Math.min(fadeIn,fadeOut);
-    if(beat.kind==='image'){
-      const data=scene(beat),v=view(beat,local);let drop=0;
-      if(!motion.matches&&v.transition){
-        const t=v.transition;
-        if(local>=t.out&&local<t.swap)opacity=Math.min(opacity,1-(local-t.out)/(t.swap-t.out));
-        else if(local>=t.swap)opacity=Math.min(opacity,(local-t.swap)/(t.end-t.swap));
-      }
-      if(!motion.matches&&data.drop&&local>=data.drop.start&&local<data.drop.end){
-        const sizes=art[shown?.key||v.key].sizes[shown?.mode||preferredArt()];
-        const bounds=ui.stage.getBoundingClientRect(),height=Math.min(bounds.height,bounds.width*sizes.height/sizes.width);
-        drop=-.10*height*Math.min(1,(local-data.drop.start)/(data.drop.end-data.drop.start));
-      }
-      beat.el.style.setProperty('--drop',drop+'px');
-      beat.el.style.setProperty('--scale',String(motion.matches||data.pov?1:1+.02*Math.min(1,local/beat.duration)));
-      if(status.available)instance.lastLocal=Math.max(instance.lastLocal,Math.min(local,beat.duration));
-    }
-    if(beat.el.style.opacity!==String(opacity))beat.el.style.opacity=String(opacity);
+    const opacity=String(Math.min(fadeIn,fadeOut));
+    if(beat.el.style.opacity!==opacity)beat.el.style.opacity=opacity;
+    if(beat.kind==='image')beat.el.style.setProperty('--scale',String(motion.matches?1:1+.02*Math.min(1,Math.max(0,local)/beat.duration)));
     if(ui.back.disabled!==(state.step===0))ui.back.disabled=state.step===0;
-    text(ui.next,state.step===beats.length-1?'Finish':'Next');hidden(ui.time,true);
-    if(state.mode==='reading'){
-      ui['progress-fill'].style.width=((state.step+1)/beats.length*100)+'%';attribute(ui.progress,'aria-valuemax',String(beats.length));attribute(ui.progress,'aria-valuenow',String(state.step+1));
-    }else{
-      ui['progress-fill'].style.width=(Math.min(1,time/TOTAL)*100)+'%';const second=Math.floor(Math.min(time,TOTAL)/1000);
-      if(second!==progressSecond){progressSecond=second;attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS));attribute(ui.progress,'aria-valuenow',String(second));}
+    text(ui.next,state.step===beats.length-1?'Finish':'Next');
+    hidden(ui.time,true);
+    if(state.mode==='reading') {
+      ui['progress-fill'].style.width=((state.step+1)/beats.length*100)+'%';
+      attribute(ui.progress,'aria-valuemax',String(beats.length)); attribute(ui.progress,'aria-valuenow',String(state.step+1));
+    } else {
+      ui['progress-fill'].style.width=(Math.min(1,time/TOTAL)*100)+'%';
+      const second=Math.floor(Math.min(time,TOTAL)/1000);
+      if(second!==progressSecond) { progressSecond=second; attribute(ui.progress,'aria-valuemax',String(TOTAL_SECONDS)); attribute(ui.progress,'aria-valuenow',String(second)); }
     }
   }
-  function finish(){if(state.phase==='end')return;freeze();state.phase='end';clock.base=TOTAL;render();announce('MINE GAME. Intro complete.');ui.enter.focus({preventScroll:true});}
-  function start(){
-    if((state.phase==='entry'&&!state.ready)||(state.phase!=='entry'&&state.phase!=='end'))return;
-    progressSecond=-1;state.mode=ui['read-mode'].checked?'reading':'timed';state.step=0;
-    state.phase=state.mode==='reading'?'reading':'playing';state.previousPhase=state.phase;
-    instance={id:null,serial:++serial,lastLocal:0,satisfied:new Set()};resetClock();render();ui.pause.focus({preventScroll:true});
+  function finish() {
+    if(state.phase==='end')return;
+    freeze(); state.phase='end'; clock.base=TOTAL;
+    render(); announce('MINE GAME. Intro complete.'); ui.enter.focus({preventScroll:true});
   }
-  function pause(fromBackground=false){
-    if(!running()&&state.phase!=='buffering')return;const now=performance.now();
-    if(state.mode==='timed'&&elapsed(now)>=TOTAL){finish();return;}
-    if(running()){freeze(now);state.previousPhase=state.phase;}state.phase='paused';render();
+  function start() {
+    if((state.phase==='entry' && !state.ready) || (state.phase!=='entry' && state.phase!=='end'))return;
+    progressSecond=-1;
+    state.mode=ui['read-mode'].checked?'reading':'timed'; state.step=0;
+    state.phase=state.mode==='reading'?'reading':'playing'; state.previousPhase=state.phase;
+    resetClock(); render(); ui.pause.focus({preventScroll:true});
+  }
+  function pause(fromBackground=false) {
+    if(!running() && state.phase!=='buffering')return;
+    const now=performance.now();
+    if(state.mode==='timed' && elapsed(now)>=TOTAL) { finish(); return; }
+    if(running()) { freeze(now); state.previousPhase=state.phase; }
+    state.phase='paused'; render();
     announce(fromBackground?'Intro paused while the page was in the background. Activate Resume to continue.':'Intro paused.');
   }
-  function resume(){if(state.phase!=='paused')return;state.phase=state.previousPhase;clock.origin=performance.now();render();}
-  function togglePause(){if(state.failed)retryArt();else if(state.phase==='paused')resume();else pause();}
-  function step(direction){
-    if(state.mode!=='reading'||!inSequence())return;const next=state.step+direction;
-    if(next>=beats.length){finish();return;}if(next<0)return;
-    state.step=next;state.phase='reading';state.previousPhase='reading';instance={id:null,serial:++serial,lastLocal:0,satisfied:new Set()};resetClock();render();
+  function resume() {
+    if(state.phase!=='paused')return;
+    state.phase=state.previousPhase; clock.origin=performance.now(); render();
   }
-  function frame(){
+  function togglePause() { if(state.failed)retryArt(); else if(state.phase==='paused')resume(); else pause(); }
+  function step(direction) {
+    if(state.mode!=='reading' || !inSequence())return;
+    const next=state.step+direction;
+    if(next>=beats.length) { finish(); return; }
+    if(next<0)return;
+    state.step=next; state.phase='reading'; state.previousPhase='reading'; resetClock(); render();
+  }
+  function frame() {
     // Always sample the fresh clock; a shared RAF timestamp can already be stale.
     const now=performance.now();
-    if(running()&&state.mode==='timed'&&elapsed(now)>=TOTAL)finish();else if(running())render(now);
+    if(running() && state.mode==='timed' && elapsed(now)>=TOTAL)finish();
+    else if(running())render(now);
     requestAnimationFrame(frame);
   }
-  ui.play.addEventListener('click',()=>state.failed?retryArt():start());ui.replay.addEventListener('click',start);
-  ui.pause.addEventListener('click',togglePause);ui.skip.addEventListener('click',finish);
-  ui.back.addEventListener('click',()=>step(-1));ui.next.addEventListener('click',()=>step(1));
-  ui['read-mode'].addEventListener('change',()=>{ui['mode-hint'].textContent=ui['read-mode'].checked?'Each card and image waits for Next.':TOTAL_SECONDS+' seconds · text and illustrated scenes';});
-  ui.enter.addEventListener('click',()=>{
-    window.dispatchEvent(new CustomEvent('minegame:start',{detail:{source:'mine-game-intro',mode:state.mode,protagonistId:profile.protagonist_id,companionIds:[...profile.companion_ids],cameraOperatorId:profile.camera_operator_id,perspective:'first-person',entryPoint:'after-separation'}}));
-    announce('Game start requested.');
-  });
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)pause(true);});window.addEventListener('pagehide',()=>pause(true));
+  ui.play.addEventListener('click',()=>state.failed?retryArt():start());
+  ui.replay.addEventListener('click',start);
+  ui.pause.addEventListener('click',togglePause);
+  ui.skip.addEventListener('click',finish);
+  ui.back.addEventListener('click',()=>step(-1));
+  ui.next.addEventListener('click',()=>step(1));
+  ui['read-mode'].addEventListener('change',()=>{ ui['mode-hint'].textContent=ui['read-mode'].checked?'Each card and image waits for Next.':TOTAL_SECONDS+' seconds · text and illustrated scenes'; });
+  ui.enter.addEventListener('click',()=>{ window.dispatchEvent(new CustomEvent('minegame:start',{detail:{source:'mine-game-intro',mode:state.mode}})); announce('Game start requested.'); });
+  document.addEventListener('visibilitychange',()=>{ if(document.hidden)pause(true); });
+  window.addEventListener('pagehide',()=>pause(true));
   document.addEventListener('keydown',event=>{
-    if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;const sequence=inSequence();
-    if(event.key==='Escape'&&sequence){event.preventDefault();finish();return;}
+    if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+    const sequence=inSequence();
+    if(event.key==='Escape' && sequence) { event.preventDefault(); finish(); return; }
     if(event.target.closest('button,input,select,textarea,a,[contenteditable="true"]'))return;
-    if(event.code==='Space'&&sequence){event.preventDefault();togglePause();}
-    else if(event.key==='ArrowRight'&&sequence&&state.mode==='reading'){event.preventDefault();step(1);}
-    else if(event.key==='ArrowLeft'&&sequence&&state.mode==='reading'){event.preventDefault();step(-1);}
+    if(event.code==='Space' && sequence) { event.preventDefault(); togglePause(); }
+    else if(event.key==='ArrowRight' && sequence && state.mode==='reading') { event.preventDefault(); step(1); }
+    else if(event.key==='ArrowLeft' && sequence && state.mode==='reading') { event.preventDefault(); step(-1); }
   });
-  if(window.ResizeObserver)new ResizeObserver(()=>render()).observe(ui.stage);else window.addEventListener('resize',()=>render());
-  motion.addEventListener?.('change',()=>render());render();requestAnimationFrame(frame);
+  if(window.ResizeObserver)new ResizeObserver(()=>render()).observe(ui.stage);
+  else window.addEventListener('resize',()=>render());
+  motion.addEventListener?.('change',()=>render());
+  render(); requestAnimationFrame(frame);
 })();
 </script>
 </body>

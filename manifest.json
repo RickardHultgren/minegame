@@ -1,7 +1,7 @@
 {
-  "release": "v8_bulb_separation_lite",
+  "release": "v7_fall_lite",
   "audio_enabled": false,
-  "total_ms": 84000,
+  "total_ms": 58000,
   "assets": [
     {
       "key": "live",
@@ -144,680 +144,364 @@
       "source_role": "anatomy-correction-original"
     },
     {
-      "key": "walk",
+      "key": "warning",
       "orientation": "desktop",
-      "file": "assets/05_walk_desktop.webp",
+      "file": "assets/05_warning_desktop.webp",
       "width": 1280,
       "height": 720,
-      "bytes": 281170,
-      "sha256": "b9067a963fbe67b89f682164eb1e3d332e20437b97380b850790ed604eb041b5",
-      "source_file": "05_walk_desktop.png",
-      "source_sha256": "a2df225b480a0baa797c500a2ed1ba3f51a4d0d32e5de0dd70875dbd2e87a8c2",
-      "source_bytes": 2998298,
+      "bytes": 278882,
+      "sha256": "41244a620b8582584b206bf34d26891f1bd96cfa653a54d318d5c0a82cb5d6d0",
+      "source_file": "05_warning_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467",
       "source_dimensions": {
         "width": 1672,
         "height": 941
       },
-      "source_role": "full_scene",
-      "hand_composite": null,
+      "source_bytes": 3046655,
+      "generation_request_id": "05_warning_desktop_fix_hands",
+      "selected_generation": "generated_images/exec-48856bbc-aa20-43d8-9b69-4b79acdfae00.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-3b2aaa1d-c659-497d-96ff-47b68f2d8695.png",
+          "role": "edit target: rejected warning draft",
+          "sha256": "b28e3ccad82d987d93f67b650bf981a207b8ee7076ff506f8a1930723bd79a85"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
+          "role": "current repaired live anatomy/hand ownership reference",
+          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+        }
+      ],
+      "visual_review": "Approved after correcting swapped phone/magnet hands and removing a handset logo. All six shoes share the timber patch; dipping board and grit visible; shoulders and free hands readable.",
       "export": {
         "format": "WebP",
         "quality": 86,
         "method": 6,
         "cropped": false,
         "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
+        "aspect_preserved_with_integer_rounding": true
       }
     },
     {
-      "key": "walk",
+      "key": "warning",
       "orientation": "mobile",
-      "file": "assets/05_walk_mobile.webp",
+      "file": "assets/05_warning_mobile.webp",
       "width": 720,
       "height": 1279,
-      "bytes": 318700,
-      "sha256": "131aa18cc5b5b0749b93125220b4fc5e6180cf10c7b287ffe3d900c5ee7db8f4",
-      "source_file": "05_walk_mobile.png",
-      "source_sha256": "4b6a5e3388333115bbf6119d0abfcbe8042b6ce762c1cac7280b0205d89d180e",
-      "source_bytes": 3242208,
+      "bytes": 312136,
+      "sha256": "0906bc08654fdf019b4e7f9aae09b36464c763b8aae3a6b312fea41dac567b6c",
+      "source_file": "05_warning_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "3bf54e873bd666abfb2a6e1b60796c6475e7df2976d9d4284b14b29db3c779a1",
       "source_dimensions": {
         "width": 941,
         "height": 1672
       },
-      "source_role": "full_scene",
-      "hand_composite": null,
+      "source_bytes": 3281198,
+      "generation_request_id": "05_warning_mobile",
+      "selected_generation": "generated_images/exec-621c1659-2c55-4a3e-83a4-5130c58bf257.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
+          "role": "approved warning desktop for same-event portrait recomposition",
+          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/01_live_desktop.png",
+          "role": "current repaired live character/anatomy reference",
+          "sha256": "b2e5f1484d3495cd6d447f8554bd982e6992d2d92edd14edb7eaacf88eb15b28"
+        }
+      ],
+      "visual_review": "Approved deliberately recomposed 9:16 group. All three full figures and six shoes on one patch; correct hands, unbranded handset back, deflated gum and readable board warning.",
       "export": {
         "format": "WebP",
         "quality": 86,
         "method": 6,
         "cropped": false,
         "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
+        "aspect_preserved_with_integer_rounding": true
       }
     },
     {
-      "key": "handoff_magnet",
+      "key": "giveway",
       "orientation": "desktop",
-      "file": "assets/06_handoff_magnet_desktop.webp",
+      "file": "assets/06_giveway_desktop.webp",
       "width": 1280,
       "height": 721,
-      "bytes": 299730,
-      "sha256": "93877a66ee7b212cb6f7b0ec43d6cdb2f034302e31d65bc151631d3044af480d",
-      "source_file": "06_handoff_magnet_desktop.png",
-      "source_sha256": "b23b83fa5aa892aed9449da2c2826b51eb529a8ad6a0644e5486913ae1584130",
-      "source_bytes": 3095203,
+      "bytes": 300198,
+      "sha256": "972f560b5f0700bac6634a88586b7f5069c1b66c7aa465ef9a99638350ae9bae",
+      "source_file": "06_giveway_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d",
       "source_dimensions": {
         "width": 1671,
         "height": 941
       },
-      "source_role": "full_scene",
-      "hand_composite": null,
+      "source_bytes": 3163186,
+      "generation_request_id": "06_giveway_desktop_fix_contact",
+      "selected_generation": "generated_images/exec-4914e896-f023-4c1c-9f32-05764cc8950f.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-cf1b5196-731a-41e2-b9a7-a72bffb6ad56.png",
+          "role": "edit target: rejected giveway draft",
+          "sha256": "82e53fd82fa2f979d159cecaf095e91282e8094c31620ab3d265140d11df986f"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_desktop.png",
+          "role": "approved warning character/style reference",
+          "sha256": "b18a8606a73b1aa028b6fe32034b8bdbda690d3a271297dfa910b1c109206467"
+        }
+      ],
+      "visual_review": "Selected corrected helper contact: purple left hand to bandana left forearm, four hands total between helpers, retained right-hand props. Tall right phone/left magnet; hair margin restored; local floor break and short chute visible.",
       "export": {
         "format": "WebP",
         "quality": 86,
         "method": 6,
         "cropped": false,
         "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
+        "aspect_preserved_with_integer_rounding": true
       }
     },
     {
-      "key": "handoff_magnet",
+      "key": "giveway",
       "orientation": "mobile",
-      "file": "assets/06_handoff_magnet_mobile.webp",
+      "file": "assets/06_giveway_mobile.webp",
       "width": 720,
       "height": 1279,
-      "bytes": 329818,
-      "sha256": "060cb1d36c58c7f7a7528c964d040593b6f0360b0ad322a617b42dd51330fc2c",
-      "source_file": "06_handoff_magnet_mobile.png",
-      "source_sha256": "f0a45fa5bc040caae60b1f63c024bba7f1de8caf01a8dbfa4470c4102d5caae6",
-      "source_bytes": 3279048,
+      "bytes": 299006,
+      "sha256": "feff9cbfbb4fa91a6c5ee3734eec9a7d6297ee7aff8819dce397c42c52bfd0ff",
+      "source_file": "06_giveway_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "f78dfd4fe55ad24d6ddee146cd143a194987efdb7b1e9d61c471704b546fcd21",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "source_bytes": 3200341,
+      "generation_request_id": "06_giveway_mobile",
+      "selected_generation": "generated_images/exec-f6f6dcdb-cf6f-4707-8020-a649fad728b6.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/06_giveway_desktop.png",
+          "role": "approved giveway desktop corrected contact/event",
+          "sha256": "9be09767dc2a2d106f967eac455b4207238daee602e752115cf6a19d7bad4f7d"
+        },
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/05_warning_mobile.png",
+          "role": "approved warning mobile portrait/environment reference",
+          "sha256": "3bf54e873bd666abfb2a6e1b60796c6475e7df2976d9d4284b14b29db3c779a1"
+        },
+        {
+          "file": "mine_intro/revisions/anatomy_corrections_v6/originals/04_gap_desktop.png",
+          "role": "current repaired gap character/anatomy reference",
+          "sha256": "842d3189257a389417868a18e13f224fd3927443632c6dab40ce46ac761f1f3a"
+        }
+      ],
+      "visual_review": "Approved portrait recomposition of the repaired helping contact; correct four helper hands and two tall hands; all figures/props within frame; localized tilted plank patch and chute head clear.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      }
+    },
+    {
+      "key": "slide",
+      "orientation": "desktop",
+      "file": "assets/07_slide_desktop.webp",
+      "width": 1280,
+      "height": 722,
+      "bytes": 76582,
+      "sha256": "d50ebd17740fbef34651fa03f6d752486db97b3a39d96cd4d57bed15b0d12b9a",
+      "source_file": "07_slide_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "e291af3b685cc16e01f9e212878a20b2ad661edd5d58783a774ddbf0f8190a26",
+      "source_dimensions": {
+        "width": 1670,
+        "height": 942
+      },
+      "source_bytes": 1196949,
+      "generation_request_id": "no_light_one_pupil_desktop",
+      "selected_generation": "generated_images/exec-382c6f65-b6b6-4983-8d4a-26954c487fec.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-382c6f65-b6b6-4983-8d4a-26954c487fec.png",
+          "role": "selected generated correction"
+        },
+        {
+          "file": "generated_images/exec-ce9ffa8e-6418-4cb7-8c35-c4dc1363e6b9.png",
+          "role": "approved one-pupil-per-eye detail reference"
+        }
+      ],
+      "visual_review": "Inspected at native and exported size: one black pupil per eye, no lateral duplicate pupil/dot; selected scene distant point and halo removed; three teenage identities and all original hands/props preserved.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      },
+      "previous_source_sha256": "ac27a7284881ccc109ae9fead339fccca8f2628a28dc88b208245a141784e3a7",
+      "previous_source_dimensions": {
+        "width": 1670,
+        "height": 942
+      },
+      "previous_export_sha256": "fbf5fc897a3c1630515f35f6a3344bbbc069a6b5c25738e4e5164e96af034dfe",
+      "art_revision": "v7_fall_lite_no_light_eye_fix"
+    },
+    {
+      "key": "slide",
+      "orientation": "mobile",
+      "file": "assets/07_slide_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 73380,
+      "sha256": "3555023c54ab872d144299dd7d88ea96dedd0e0a4edac2ece74bba55bc1bf4b2",
+      "source_file": "07_slide_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "3880d738bf3cef4dbc7fd6390f61816ffd8102e29ff942ed65e16260abc40aa9",
+      "source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "source_bytes": 1119085,
+      "generation_request_id": "no_light_one_pupil_mobile",
+      "selected_generation": "generated_images/exec-b1562edc-6c17-401a-8e1d-a790fbf5ddee.png",
+      "reference_roles": [
+        {
+          "file": "generated_images/exec-b1562edc-6c17-401a-8e1d-a790fbf5ddee.png",
+          "role": "selected generated correction"
+        },
+        {
+          "file": "generated_images/exec-ce9ffa8e-6418-4cb7-8c35-c4dc1363e6b9.png",
+          "role": "approved one-pupil-per-eye detail reference"
+        }
+      ],
+      "visual_review": "Inspected at native and exported size: one black pupil per eye, no lateral duplicate pupil/dot; selected scene distant point and halo removed; three teenage identities and all original hands/props preserved.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      },
+      "previous_source_sha256": "bbde0ecdd4188708a356359f44febbf2bcc70af923ae69c165519ffafc1bb239",
+      "previous_source_dimensions": {
+        "width": 941,
+        "height": 1672
+      },
+      "previous_export_sha256": "77f1129b5d0fee1dd076a269a98c9c86530be7072a8e105633cdc17cfabe109e",
+      "art_revision": "v7_fall_lite_no_light_eye_fix"
+    },
+    {
+      "key": "below",
+      "orientation": "desktop",
+      "file": "assets/08_below_desktop.webp",
+      "width": 1280,
+      "height": 722,
+      "bytes": 21164,
+      "sha256": "45c0518fc7c3634ebc0c872d53a9dc454caabc6c50ffcffb16644331b21249da",
+      "source_file": "08_below_desktop.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "127a1ce33ea1db74072ec0b0674493e1356ff823ad38d4090067f54963e0f640",
+      "source_dimensions": {
+        "width": 1670,
+        "height": 942
+      },
+      "source_bytes": 895646,
+      "generation_request_id": "eye08_desktop_readable",
+      "selected_generation": "generated_images/exec-6aef2a03-1e84-4ff9-990c-e4a75ed92de0.png",
+      "reference_roles": [
+        {
+          "file": "/workspace/scratch/1ae913234b76/generated_images/exec-74fa84e7-c6e3-49ca-b181-047f35e36751.png",
+          "role": "edit target",
+          "sha256": "7fd2cba61d19da11e27b760308106caaf987894ac6ac2781554190f8b19b6322"
+        },
+        {
+          "file": "/workspace/scratch/1ae913234b76/tmp/v7_eye_qa/07_mobile_inspection.png",
+          "role": "corrected eye-detail reference only",
+          "sha256": "d2b2b404ad09821817ac20a81be3d3023d0d7f312aa21395a1c853419b6ad982"
+        }
+      ],
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
+      "export": {
+        "format": "WebP",
+        "quality": 86,
+        "method": 6,
+        "cropped": false,
+        "upscaled": false,
+        "aspect_preserved_with_integer_rounding": true
+      },
+      "previous_source_sha256": "2f7b5d3f725b3cc9a323503bf51b641cdb07ecc319ac85452f763d4894eef5ed",
+      "previous_source_dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "previous_export_sha256": "a3d56c718d558d976736ea16c15a79b9997171f665645b2f3aa6243bfe428296",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
+    },
+    {
+      "key": "below",
+      "orientation": "mobile",
+      "file": "assets/08_below_mobile.webp",
+      "width": 720,
+      "height": 1279,
+      "bytes": 26344,
+      "sha256": "ceb7f93701bf50a8744313fc35b85ac152f81ee34bdd45a202d8df0d3fc0cbfd",
+      "source_file": "08_below_mobile.png",
+      "source_role": "v7_fall_selected_native_png",
+      "source_sha256": "d9df69b0f228f05760103ba5281e75bc1bab1a67377ede9b10203ef12695bbf8",
       "source_dimensions": {
         "width": 941,
         "height": 1671
       },
-      "source_role": "full_scene",
-      "hand_composite": null,
+      "source_bytes": 706746,
+      "generation_request_id": "eye08_mobile",
+      "selected_generation": "generated_images/exec-406cc18c-d2c7-4e95-8dbd-0103defc6f55.png",
+      "reference_roles": [
+        {
+          "file": "mine_intro_v7_fall_art_source/originals/08_below_mobile.png",
+          "role": "edit target",
+          "sha256": "43e6fd0c8de3c1e6e50680fa4a0afdf294299c906fd26e3d74ca2dac8abf8284",
+          "historical_source": "backups/v7_before_eye_fix/mine_game_intro_v7_fall_art_source.zip::originals/08_below_mobile.png"
+        },
+        {
+          "file": "tmp/v7_eye_qa/07_mobile_inspection.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "d2b2b404ad09821817ac20a81be3d3023d0d7f312aa21395a1c853419b6ad982",
+          "note": "Inspection-only magnified crop; no manual pixel painting of final artwork. Referenced solely to locate/refine eyes."
+        },
+        {
+          "file": "generated_images/exec-74fa84e7-c6e3-49ca-b181-047f35e36751.png",
+          "role": "eye-treatment/detail reference only",
+          "sha256": "7fd2cba61d19da11e27b760308106caaf987894ac6ac2781554190f8b19b6322"
+        }
+      ],
+      "visual_review": "Phone-holder eyes repaired: one dark pupil per eye, coherent down/right gaze, no duplicate edge pupil marks or blank eyes. Falling composition, owners/hand sides and distant light retained.",
       "export": {
         "format": "WebP",
         "quality": 86,
         "method": 6,
         "cropped": false,
         "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_far_magnet",
-      "orientation": "desktop",
-      "file": "assets/07_approach_far_magnet_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 311394,
-      "sha256": "5f63eff0190ce59bf35b01849b70f5b3be579b7559320eb5c9e7217bfb988fea",
-      "source_file": "07_approach_far_magnet_desktop.png",
-      "source_sha256": "d894cd9dc219364a606f467b24b9ad321c4d239637a1ad183095a46146bcb3dc",
-      "source_bytes": 3221804,
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
+        "aspect_preserved_with_integer_rounding": true
       },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          504
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_far_magnet",
-      "orientation": "mobile",
-      "file": "assets/07_approach_far_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 326360,
-      "sha256": "204c532ee241f17230e6fe66b330273f1b9fab2d3b149094bf73332c0b190381",
-      "source_file": "07_approach_far_magnet_mobile.png",
-      "source_sha256": "7b0cd06eb4ff2a76c2ec527e7bdc066427da367401b8100a1292419a7f287363",
-      "source_bytes": 3373915,
-      "source_dimensions": {
+      "previous_source_sha256": "43e6fd0c8de3c1e6e50680fa4a0afdf294299c906fd26e3d74ca2dac8abf8284",
+      "previous_source_dimensions": {
         "width": 941,
         "height": 1672
       },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_mid_magnet",
-      "orientation": "desktop",
-      "file": "assets/07_approach_mid_magnet_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 292306,
-      "sha256": "5bae31d68b5027c25a6e1610a3c0a3d90fc75ec6cecb4d0852e71505b944e6e3",
-      "source_file": "07_approach_mid_magnet_desktop.png",
-      "source_sha256": "82896768044a370fb68535640410319083537c1f63afb55e48e12d6a95c3c15c",
-      "source_bytes": 3076388,
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          504
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_mid_magnet",
-      "orientation": "mobile",
-      "file": "assets/07_approach_mid_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 285914,
-      "sha256": "9b0299e12ae7afcd9af778865972f71fdc096ffcee77a3b062dd8eccaa12f278",
-      "source_file": "07_approach_mid_magnet_mobile.png",
-      "source_sha256": "f528821bfe73f8dbfd12e66201cc7fccbff33e403817caeafea2d08c6be73473",
-      "source_bytes": 3060655,
-      "source_dimensions": {
-        "width": 941,
-        "height": 1672
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_near_magnet",
-      "orientation": "desktop",
-      "file": "assets/07_approach_near_magnet_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 304472,
-      "sha256": "b1d275f616b91437310ef6b2d862b04ab056a4783223b3c208d05dca9ef97bfb",
-      "source_file": "07_approach_near_magnet_desktop.png",
-      "source_sha256": "4ef1159f279815f23c1cae7e0bd8ae7ab00b44b3fcb4fb0c11d624bb5a174305",
-      "source_bytes": 3210379,
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          504
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "approach_near_magnet",
-      "orientation": "mobile",
-      "file": "assets/07_approach_near_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 299638,
-      "sha256": "c4231c949e2ea5318078029899802c40ba61cec5fd291b076d45ef6e18b42449",
-      "source_file": "07_approach_near_magnet_mobile.png",
-      "source_sha256": "290c8677bfdd6e93877e14cc36fe32e943b72e3080cf40141a3f5c19559dd028",
-      "source_bytes": 3084415,
-      "source_dimensions": {
-        "width": 941,
-        "height": 1672
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "drop_magnet",
-      "orientation": "desktop",
-      "file": "assets/08_drop_magnet_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 301006,
-      "sha256": "016d3e1fef624bebfa01609c2386f55818151524fe8558fe4995dc0a781d9b01",
-      "source_file": "08_drop_magnet_desktop.png",
-      "source_sha256": "a587640309517faf287bd52674274fc6554d59cc47d77d6e0caf74f972d715d0",
-      "source_bytes": 3304960,
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          504
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "drop_magnet",
-      "orientation": "mobile",
-      "file": "assets/08_drop_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 301262,
-      "sha256": "18f11e9a90617256c28c634075c8b32f7762d9a27cff98fe1b87165779cb74ab",
-      "source_file": "08_drop_magnet_mobile.png",
-      "source_sha256": "127ef270f47bd3b94fe3d1672f7bb5d2599d11488b7125f6cc24bc997f225a09",
-      "source_bytes": 3218683,
-      "source_dimensions": {
-        "width": 941,
-        "height": 1672
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "separation_magnet",
-      "orientation": "desktop",
-      "file": "assets/09_separation_magnet_desktop.webp",
-      "width": 1280,
-      "height": 721,
-      "bytes": 308584,
-      "sha256": "9215325669823c8179bd22e4ce9007d87f071db184fe0d1af4b99674d3f46d41",
-      "source_file": "09_separation_magnet_desktop.png",
-      "source_sha256": "02bf0921c6de60d8248695a0e769f94e729a2759111fd1f9e7f1241637605861",
-      "source_bytes": 3169743,
-      "source_dimensions": {
-        "width": 1671,
-        "height": 941
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          505
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "separation_magnet",
-      "orientation": "mobile",
-      "file": "assets/09_separation_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 335006,
-      "sha256": "3c23e7e64640dff03c183a3cb0c6b34181355f09c3da19af3299a3ef58424e6b",
-      "source_file": "09_separation_magnet_mobile.png",
-      "source_sha256": "44336d1a519a10d40e6305fe8478b0f0be2193e35fe42183a32c1dc5c0925d5e",
-      "source_bytes": 3384243,
-      "source_dimensions": {
-        "width": 941,
-        "height": 1671
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "player_magnet",
-      "orientation": "desktop",
-      "file": "assets/10_player_magnet_desktop.webp",
-      "width": 1280,
-      "height": 720,
-      "bytes": 264472,
-      "sha256": "cac63726f2e8626a002c3187e7bb013125e0505da6c902e7cff2e10e7c447c57",
-      "source_file": "10_player_magnet_desktop.png",
-      "source_sha256": "1a9fc9f0a236ce9c84f619b906e2307f8af34d84817f15999d3166c46ee3e128",
-      "source_bytes": 3117108,
-      "source_dimensions": {
-        "width": 1672,
-        "height": 941
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          58,
-          504
-        ],
-        "size_px": [
-          217,
-          216
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
-    },
-    {
-      "key": "player_magnet",
-      "orientation": "mobile",
-      "file": "assets/10_player_magnet_mobile.webp",
-      "width": 720,
-      "height": 1279,
-      "bytes": 262008,
-      "sha256": "dcd1a2e4b4e84f2b34257b4ff3dabd60cb9a815fa5c012588c190f831ab47036",
-      "source_file": "10_player_magnet_mobile.png",
-      "source_sha256": "85192c640841d172a791b53a7daae8bf6fdc56d43e3289eae0ff71e357af9840",
-      "source_bytes": 2982956,
-      "source_dimensions": {
-        "width": 941,
-        "height": 1672
-      },
-      "source_role": "pov_background",
-      "hand_composite": {
-        "source_file": "pov_magnet_left_hand.png",
-        "sha256": "515986c631d216dbcbe342d3dfa767bc473ff5679356decb446be5a3726dc0b5",
-        "alpha_bbox": [
-          0,
-          3,
-          1254,
-          1254
-        ],
-        "position_px": [
-          43,
-          998
-        ],
-        "size_px": [
-          282,
-          281
-        ],
-        "mirror": false,
-        "rotation_degrees": 0,
-        "runtime_layers": 0
-      },
-      "export": {
-        "format": "WebP",
-        "quality": 86,
-        "method": 6,
-        "cropped": false,
-        "upscaled": false,
-        "aspect_preserved_with_integer_rounding": true,
-        "libwebp_version": "1.6.0"
-      }
+      "previous_export_sha256": "cab2a12a6e9b101f2d400ee109cc7c9a24a9bd11e70f3031a92e60d01cc35fcc",
+      "art_revision": "v7_fall_lite_dark_world_eye_fix"
     }
   ],
   "original_image_bytes": 23310154,
-  "image_bytes": 7330664,
+  "image_bytes": 3896516,
   "export": {
     "quality": 86,
     "format": "WebP",
@@ -825,7 +509,7 @@
     "cropped": false,
     "method": 6,
     "protected_existing_exports": 8,
-    "new_selected_exports": 16
+    "new_selected_exports": 8
   },
   "variant_of": {
     "release": "v5_silent",
@@ -837,14 +521,13 @@
   "loading": {
     "initial_images": 1,
     "max_owned_sources": 2,
-    "strategy": "current + next internal/main frame, or old current + orientation replacement",
+    "strategy": "current + next, or current + orientation replacement",
     "end_releases_images": true,
     "external_relative_assets": true,
-    "missing_image_holds_clock": true,
-    "internal_frame_holds_clock": true
+    "missing_image_holds_clock": true
   },
-  "art_revision": "v8_bulb_separation_lite_selected_art",
-  "art_revision_scope": "Sixteen new walk/handoff/POV approach/drop/separation/player WebPs with one flattened LEFT magnet hand; eight earlier compressed payloads unchanged.",
+  "art_revision": "v7_fall_lite_no_light_eye_fix",
+  "art_revision_scope": "Only 07_slide desktop/mobile: remove distant light and lateral eye spots; 14 other WebPs, story cards, duration and player behavior unchanged.",
   "art_revision_history": [
     {
       "revision": "v6_lite_shoulder_fix",
@@ -865,22 +548,38 @@
       "superseded_by": "v7_fall_lite_dark_world_eye_fix"
     },
     {
-      "revision": "v7_fall_lite_dark_world_eye_fix",
-      "scope": "Preserved pre-bulb baseline; final four falling images and all v7 source remain in external history."
+      "revision": "v7_fall_lite_no_light_eye_fix",
+      "date": "2026-11-24",
+      "scope": "Only 07_slide desktop/mobile: remove distant light and lateral eye spots; 14 other WebPs, story cards, duration and player behavior unchanged."
     }
   ],
   "art_stage": {
-    "status": "complete_checked_exports",
-    "selected_new_native_pngs": 17,
-    "selected_new_runtime_webps": 16,
-    "hand_sources": 1,
-    "runtime_hand_layers": 0
+    "revision": "v7_fall_lite",
+    "status": "eye_corrected_exports_checked",
+    "source_checkpoint": "mine_game_intro_v7_fall_art_checkpoint.zip",
+    "source_checkpoint_sha256": "2aa27150eb734db51051a51bfd2018e5086679740513ff0e2c2a8d0ab2a83bc3",
+    "selected_new_image_count": 8,
+    "selected_new_image_bytes": 1379346,
+    "selected_native_originals": "../mine_intro_v7_fall_art_source/originals/",
+    "active_art_order": [
+      "live",
+      "legend",
+      "cut",
+      "gap",
+      "warning",
+      "giveway",
+      "slide",
+      "below"
+    ],
+    "art_review": "production/art_review.json",
+    "note": "Art review records the completed preceding art-only stage. Current player implementation status is recorded separately in verification.md and production/integration_report.json.",
+    "current_art_revision": "v7_fall_lite_dark_world_eye_fix"
   },
-  "beat_count": 20,
-  "image_beat_count": 10,
-  "art_key_count": 12,
-  "active_image_file_count": 24,
-  "original_image_bytes_scope": "Historical v5_silent ten-image source total; not the current v8 source total. source_native_new_bytes is the 17 selected new PNG total.",
+  "beat_count": 16,
+  "image_beat_count": 8,
+  "art_key_count": 8,
+  "active_image_file_count": 16,
+  "original_image_bytes_scope": "Historical v5_silent ten-image source total; not the source-byte total for the eight-event v7 revision.",
   "baseline": {
     "source_name": "mine_game_intro_v6_lite.zip",
     "source_bytes": 2938631,
@@ -899,81 +598,27 @@
     ]
   },
   "implementation": {
-    "status": "verified_and_packaged_native_browser_unavailable",
-    "total_ms": 84000,
+    "status": "checked_silent_intro_with_native_browser_limits",
+    "total_ms": 58000,
     "timed_entry_and_title": false,
-    "cards": 10,
-    "image_events": 10,
-    "frame_pairs": 12,
+    "cards": 8,
+    "image_events": 8,
+    "final_visual_verification": "exports_reviewed_native_player_access_blocked",
+    "final_packaging": "checked_eye_corrected_runtime_and_art_source_archives",
     "gameplay_implemented": false,
-    "default_protagonist": "magnet",
-    "selection_mode": "fixed_default_future_branches_incomplete",
     "reports": [
       "file_checks.json",
       "runtime_checks.json",
-      "production/integration_report.json",
-      "production/verification_report.json",
+      "production/integration_report.json"
+    ],
+    "verification_reports": [
+      "verification.md",
       "production/art_review.json",
-      "production/camera_review.json",
-      "production/profile_verification.json",
       "production/browser_review.json",
-      "production/delivery_checks.json"
+      "file_checks.json",
+      "runtime_checks.json"
     ],
-    "final_visual_verification": "all_sources_and_exports_inspected_native_player_unavailable",
-    "final_packaging": "completed_clean_rebuild_checks_passed",
-    "runtime_cases": 47
+    "packaging_report": "production/package_checks.json"
   },
-  "text_card_count": 10,
-  "image_event_count": 10,
-  "frame_pair_count": 12,
-  "retired_v7_art": {
-    "active": false,
-    "keys": [
-      "warning",
-      "giveway",
-      "slide",
-      "below"
-    ],
-    "preserved_in": "v7 baseline archives outside runtime",
-    "files": [
-      "assets/05_warning_desktop.webp",
-      "assets/05_warning_mobile.webp",
-      "assets/06_giveway_desktop.webp",
-      "assets/06_giveway_mobile.webp",
-      "assets/07_slide_desktop.webp",
-      "assets/07_slide_mobile.webp",
-      "assets/08_below_desktop.webp",
-      "assets/08_below_mobile.webp"
-    ]
-  },
-  "source_native_new_bytes": 51861915,
-  "current_baseline": {
-    "release": "v7_fall_lite_dark_world_eye_fix",
-    "runtime_archive_bytes": 3981397,
-    "runtime_archive_sha256": "322963169ae884187e1a402dfa34501270a5b4d9c50f4ee9ebdb0dabb61510b1",
-    "preserved_outside_runtime": true
-  },
-  "verification": {
-    "date": "2026-11-23",
-    "status": "passed_available_checks",
-    "native_browser_observations": false,
-    "unchanged_webps_since_preverification": 24,
-    "unchanged_new_pngs_since_preverification": 17,
-    "protected_webps_match_baseline": 8,
-    "audio_present": false,
-    "final_packaging_performed": true
-  },
-  "delivery": {
-    "date": "2026-11-23",
-    "runtime_archive": "mine_game_intro_v8_bulb_separation_lite.zip",
-    "art_source_archive": "mine_game_intro_v8_bulb_art_source.zip",
-    "explicit_allowlists": true,
-    "runtime_flattened_webps": 24,
-    "pov_flattened_webps": 12,
-    "new_native_png_sources": 17,
-    "runtime_only_build_requires_native_pngs": false,
-    "runtime_reports_depend_on_native_source_presence": false,
-    "deterministic_clean_rebuild": "passed_both_archives",
-    "native_browser_observations": false
-  }
+  "variant": "58-second all-three-fall intro; separate from v8 bulb/separation"
 }

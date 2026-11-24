@@ -55,7 +55,7 @@ def package_art_source(source, output):
              'production/generation_requests.json', 'production/selected_images.json',
              'production/export_selected.py']
     names += ['originals/' + a['file'] for a in native['files']]
-    for name in ('production/dark_world_revision.json', 'production/eye_fix_revision.json'):
+    for name in ('production/dark_world_revision.json', 'production/eye_fix_revision.json', 'production/no_light_eye_fix_revision.json'):
         if (source / name).is_file():
             names.append(name)
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -77,10 +77,10 @@ def package_art_source(source, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT.parent / 'mine_game_intro_v7_fall_lite.zip')
+    parser.add_argument('--output', type=Path, default=ROOT.parent / 'mine_game_intro_v7_fall_lite_no_light_eye_fix.zip')
     parser.add_argument('--check-only', action='store_true', help='Run checks without creating a release ZIP')
     parser.add_argument('--art-source', type=Path, help='Optionally verify/package the separate selected PNG source root')
-    parser.add_argument('--art-output', type=Path, default=ROOT.parent / 'mine_game_intro_v7_fall_art_source.zip')
+    parser.add_argument('--art-output', type=Path, default=ROOT.parent / 'mine_game_intro_v7_fall_lite_no_light_eye_fix_art_source.zip')
     args = parser.parse_args()
     for directory in ('tools', 'checks'):
         for path in (ROOT / directory).glob('*.py'):

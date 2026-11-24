@@ -17,7 +17,7 @@ def sha(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--originals', type=Path,
-                        default=ROOT.parent / 'mine_intro_v7_fall_art_source/originals',
+                        default=ROOT.parent / 'mine_intro_v7_fall_no_light_eye_fix_art_source/originals',
                         help='Separate folder containing the eight selected 05–08 native PNGs')
     parser.add_argument('--check-only', action='store_true', help='Verify exports in memory without writing')
     args = parser.parse_args()
